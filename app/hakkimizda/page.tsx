@@ -1,42 +1,11 @@
 import Link from "next/link";
+import SiteHeader from "../SiteHeader";
 import BrandFooter from "../BrandFooter";
-
-export const metadata = {
-  title: "Hakkımızda | E-GARAJ",
-  description: "CinestaAI markası E-Garaj'ın vizyonunu, dijital araç tasarımı yaklaşımını ve gelişim hedeflerini keşfedin."
-};
-
-export default function AboutPage() {
-  return <main>
-    <header className="nav">
-      <Link href="/" className="brand" aria-label="E-GARAJ ana sayfa"><img src="/e-garaj-logo.svg" alt="E-GARAJ" className="brand-logo"/></Link>
-      <nav><Link href="/">ANA SAYFA</Link><Link href="/studio">ARAÇ TASARIMI</Link><Link href="/#features">UYUMLU ÜRÜNLER</Link><Link className="active" href="/hakkimizda">HAKKIMIZDA</Link></nav>
-      <Link className="navbtn" href="/studio">GARAJA GİR ↗</Link>
-    </header>
-    <section className="about-hero"><div className="about-grid-mark" aria-hidden="true">EG / 26</div>
-      <div className="about-hero-inner">
-        <small className="kicker">CINESTAAI / E-GARAJ</small>
-        <h1>YENİ NESİL<br/><em>DİJİTAL GARAJ.</em></h1>
-        <p>Otomobil tutkusunu dijital tasarımla buluşturan bir deneyim.</p>
-      </div>
-    </section>
-    <section className="about-content"><div className="section-rule"><span>E-GARAJ / KURUMSAL</span><span>01 — 03</span></div>
-      <div className="about-intro">
-        <small className="kicker">HAKKIMIZDA</small>
-        <h2>Bir garajdan<br/><em>çok daha fazlası.</em></h2>
-        <div><p>E-Garaj, <strong>CinestaAI</strong> tarafından geliştirilen dijital otomotiv deneyimidir. Amacımız, otomobil meraklılarının araçlarını keşfedebildiği, kişiselleştirebildiği ve tasarım tercihlerini saklayabildiği kullanıcı odaklı bir alan oluşturmak.</p><p>İlk konseptimiz Audi modelleriyle başlıyor. Gelecekte daha fazla marka, araç seçeneği ve uyumlu ürün keşfi deneyimini platforma kazandırmayı hedefliyoruz.</p></div>
-      </div>
-      <div className="about-cards">
-        <article><span>01 / DENEYİM</span><h3>Özgürce tasarla.</h3><p>Model, renk ve jant tercihlerini tek bir dijital stüdyoda keşfet.</p></article>
-        <article><span>02 / KİŞİSELLEŞTİRME</span><h3>Garajın sana özel.</h3><p>Tasarımlarını tarayıcına kaydet ve istediğinde yeniden aç.</p></article>
-        <article><span>03 / GELECEK</span><h3>Daha fazlasına hazır.</h3><p>Yeni araçlar ve uyumlu ürün keşfiyle genişlemeyi hedefleyen bir platform.</p></article>
-      </div>
-      <div className="about-cinesta">
-        <div><small className="kicker">MARKA EKOSİSTEMİ</small><h2>BİR <em>CINESTAAI</em><br/>MARKASI.</h2></div>
-        <div><p>E-Garaj, CinestaAI'ın dijital ürün geliştirme yaklaşımıyla oluşturulan bir otomotiv projesidir.</p><a href="https://cinestaai.com" target="_blank" rel="noopener noreferrer" className="ghost-btn">CINESTAAI'I KEŞFET ↗</a></div>
-      </div>
-      <p className="about-disclaimer">Bu mağazadaki hizmetlerin markalarla resmî bağlantısı bulunmamaktadır.</p>
-    </section>
-    <BrandFooter/>
-  </main>;
-}
+export const metadata={title:"Hakkımızda | E-GARAJ",description:"CinestaAI markası E-Garaj'ın vizyonunu ve dijital otomotiv deneyimini keşfedin."};
+export default function AboutPage(){return <main className="ks-site"><SiteHeader active="about"/>
+<section className="ks-about-hero"><div className="ks-about-visual"/><div className="ks-about-overlay"/><div className="ks-about-heading"><span className="ks-overline">E-GARAJ / BİZ KİMİZ</span><h1>YENİ BİR<br/>BAKIŞ AÇISI.</h1><p>Otomobil tutkusunun dijital dünyadaki karşılığı.</p></div></section>
+<section className="ks-about-statement"><div className="ks-section-meta"><span>01 / VİZYON</span><span>E-GARAJ BY CINESTAAI</span></div><div className="ks-about-statement-grid"><h2>SADECE BİR<br/><em>GARAJ DEĞİL.</em></h2><div><p>E-Garaj, CinestaAI tarafından geliştirilen bir dijital otomotiv deneyimidir. Otomobil meraklılarının hayal ettikleri araçları keşfedebildiği, kişiselleştirebildiği ve tercihlerini saklayabildiği bir alan oluşturmak için tasarlandı.</p><p>İlk konsept Audi modelleriyle başlıyor. İlerleyen aşamalarda yeni markalar ve uyumlu ürün keşfi deneyimleriyle büyümeyi hedefliyoruz.</p></div></div></section>
+<section className="ks-about-image-break"><div className="ks-about-image-shade"/><span>FORM. DETAIL. EXPERIENCE.</span></section>
+<section className="ks-about-principles"><div className="ks-section-meta"><span>02 / YAKLAŞIMIMIZ</span><span>GELECEĞİN GARAJI</span></div><div className="ks-principles"><article><span>01</span><h3>KEŞFET.</h3><p>Farklı otomobil modellerini ve seçeneklerini dijital ortamda incele.</p></article><article><span>02</span><h3>TASARLA.</h3><p>Renk ve jant tercihlerini belirleyerek kendi kombinasyonunu oluştur.</p></article><article><span>03</span><h3>SAKLA.</h3><p>Tasarım tercihlerini tarayıcına kaydet ve yeniden görüntüle.</p></article></div></section>
+<section className="ks-about-parent"><div><span className="ks-overline">MARKA EKOSİSTEMİ</span><h2>BİR <em>CINESTAAI</em><br/>MARKASI.</h2></div><div><p>E-Garaj, CinestaAI’ın yazılım ve dijital ürün geliştirme vizyonunun otomotiv dünyasındaki ürünlerinden biridir.</p><a className="ks-outline-btn" href="https://cinestaai.com" target="_blank" rel="noopener noreferrer">CINESTAAI'I KEŞFET <span>↗</span></a></div></section>
+<BrandFooter/></main>}
