@@ -14,7 +14,7 @@ export default function BrandFooter() {
           <Link href="/">Ana Sayfa</Link>
           <Link href="/studio">Araç Tasarımı</Link>
           <Link href="/#features">Özellikler</Link>
-          <Link href="/#about">Hakkımızda</Link>
+          <Link href="/hakkimizda">Hakkımızda</Link>
         </div>
         <div className="footer-company">
           <h3>MARKA HAKKINDA</h3>
