@@ -1,0 +1,1 @@
+import "./styles.css";import type {ReactNode} from "react";export const metadata={title:"E-GARAJ | Yeni Nesil Dijital Garaj",description:"Aracını seç, tarzını tasarla. E-GARAJ otomobil stüdyosu."};export default function Layout({children}:{children:ReactNode}){return <html lang="tr"><body>{children}</body></html>}
