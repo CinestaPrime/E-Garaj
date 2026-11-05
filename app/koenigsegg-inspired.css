@@ -1,0 +1,188 @@
+
+/* E-Garaj editorial supercar design; original E-Garaj branding */
+.ks-site{--ks-black:#080909;--ks-ink:#111213;--ks-white:#f4f3f0;--ks-silver:#a2a3a4;--ks-line:rgba(255,255,255,.21);background:var(--ks-black);color:var(--ks-white);font-family:'DM Sans',Arial,sans-serif}
+.ks-site *{box-sizing:border-box}
+.ks-site .ks-nav{height:76px;position:relative;z-index:30;background:#0b0b0bf5;padding:0 5vw;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.17)}
+.ks-site .ks-brand{display:flex;align-items:center;flex:0 0 auto}
+.ks-site .ks-brand img{width:115px;height:auto;max-height:42px;object-fit:contain}
+.ks-site .ks-nav nav{display:flex;align-items:center;gap:38px}
+.ks-site .ks-nav nav a{font-size:10px;letter-spacing:.15em;color:#bfc1c2;font-weight:700;transition:color .2s}
+.ks-site .ks-nav nav a:hover,.ks-site .ks-nav nav a.active{color:#fff}
+.ks-site .ks-nav-action{border:1px solid rgba(255,255,255,.62);padding:13px 19px;display:flex;align-items:center;gap:22px;font-size:10px;font-weight:700;letter-spacing:.12em;transition:background .2s}
+.ks-site .ks-nav-action:hover{background:#fff;color:#111}
+.ks-site .ks-overline{display:block;letter-spacing:.22em;font-size:10px;font-weight:700;color:#e1e1df}
+.ks-site .ks-outline-btn{display:inline-flex;align-items:center;justify-content:space-between;gap:30px;border:1px solid #d8d8d5;color:#fff;font-size:10px;letter-spacing:.15em;font-weight:700;padding:19px 22px;min-width:210px;transition:background .2s,color .2s}
+.ks-site .ks-outline-btn:hover{background:#f7f7f5;color:#111}
+.ks-site .ks-text-link{font-size:11px;font-weight:700;letter-spacing:.13em;border-bottom:1px solid currentColor;padding-bottom:11px;display:inline-flex;gap:38px;justify-content:space-between}
+.ks-site .ks-text-link:hover{color:#d0afa0}
+.ks-site .ks-hero{height:calc(100svh - 76px);min-height:640px;max-height:1080px;position:relative;overflow:hidden;display:flex;align-items:center;background:#050606}
+.ks-site .ks-hero-photo{position:absolute;inset:0;background:url('/audi-garage.jpg.png') center 49% / cover no-repeat;filter:brightness(.8) saturate(.64) contrast(1.07)}
+.ks-site .ks-hero-tint{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.68),rgba(0,0,0,.16) 65%,rgba(0,0,0,.12)),linear-gradient(0deg,rgba(0,0,0,.61),transparent 25%,transparent 75%,rgba(0,0,0,.24))}
+.ks-site .ks-hero-head{position:absolute;top:39px;left:5vw;right:5vw;display:flex;justify-content:space-between;font-size:9px;letter-spacing:.17em;font-weight:700;color:#d4d4d1}
+.ks-site .ks-hero-copy{z-index:1;position:relative;margin-left:8vw;max-width:950px;margin-top:65px}
+.ks-site .ks-hero-copy h1{font:800 clamp(76px,9.4vw,154px)/.91 'Barlow Condensed',Impact,sans-serif;letter-spacing:-.01em;margin:25px 0 24px;text-shadow:0 2px 26px #0008}
+.ks-site .ks-hero-copy h1 em{font-style:normal;color:#fff}
+.ks-site .ks-hero-copy p{font-size:14px;max-width:390px;line-height:1.85;color:#e7e7e6;margin-bottom:30px}
+.ks-site .ks-hero-bottom{position:absolute;bottom:31px;left:5vw;font-size:9px;letter-spacing:.19em}
+.ks-site .ks-section-meta{display:flex;justify-content:space-between;gap:20px;font-size:10px;font-weight:700;letter-spacing:.16em;color:#777a7c}
+.ks-site .ks-intro{padding:112px 8vw 135px;background:#f2f0eb;color:#171717}
+.ks-site .ks-intro-columns{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(280px,.65fr);align-items:end;gap:6vw;margin-top:83px}
+.ks-site .ks-intro h2,.ks-site .ks-editorial h2,.ks-site .ks-brand-story h2,.ks-site .ks-about-statement h2,.ks-site .ks-about-parent h2{font:800 clamp(62px,7vw,118px)/.91 'Barlow Condensed',Impact,sans-serif;letter-spacing:-.014em;margin:0}
+.ks-site .ks-intro h2 span,.ks-site .ks-editorial h2 span{color:#777977}
+.ks-site .ks-intro p{font-size:15px;line-height:1.9;color:#454646;max-width:440px;margin:0 0 29px}
+.ks-site .ks-spotlight{min-height:680px;position:relative;display:flex;align-items:flex-end;background:#080909;overflow:hidden}
+.ks-site .ks-spotlight-img{position:absolute;inset:0;background:url('/audi-garage.jpg.png') center center / cover no-repeat;filter:brightness(.58) saturate(.48)}
+.ks-site .ks-spotlight-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.85),transparent 83%),linear-gradient(0deg,rgba(0,0,0,.68),transparent 75%)}
+.ks-site .ks-spotlight-content{position:relative;z-index:1;padding:75px 8vw 95px;max-width:890px}
+.ks-site .ks-spotlight h2{font:800 clamp(75px,9vw,148px)/.87 'Barlow Condensed',Impact,sans-serif;margin:24px 0}
+.ks-site .ks-spotlight p{font-size:14px;line-height:1.85;max-width:375px;color:#dbdddd;margin-bottom:28px}
+.ks-site .ks-editorial{padding:112px 8vw 135px;background:#0c0d0e}
+.ks-site .ks-editorial .ks-section-meta{color:#96999a}
+.ks-site .ks-editorial-head{margin-top:72px;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(240px,.6fr);gap:55px;align-items:end}
+.ks-site .ks-editorial-head p{color:#b5b6b5;line-height:1.9;font-size:14px}
+.ks-site .ks-editorial-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:66px}
+.ks-site .ks-editorial-tile{height:480px;position:relative;overflow:hidden;background:#242729;display:block}
+.ks-site .ks-tile-image{position:absolute;inset:0;background:url('/audi-garage.jpg.png') 55% 50% / cover;filter:brightness(.72) saturate(.6);transition:transform .5s}
+.ks-site .ks-editorial-tile:hover .ks-tile-image{transform:scale(1.04)}
+.ks-site .ks-tile-abstract{position:absolute;inset:0;background:radial-gradient(circle at 60% 30%,#454747,#111315 70%);display:grid;place-items:center}
+.ks-site .ks-tile-abstract span{font:800 clamp(140px,18vw,320px) 'Barlow Condensed';color:#ffffff13}
+.ks-site .ks-tile-info{position:absolute;inset:auto 0 0;padding:45px 35px 29px;display:grid;grid-template-columns:1fr auto;gap:15px;background:linear-gradient(transparent,#050505ce);align-items:end}
+.ks-site .ks-tile-info>span{grid-column:1/-1;font-size:9px;letter-spacing:.18em;color:#d4d4d4}
+.ks-site .ks-tile-info h3{font:800 clamp(32px,3vw,53px) 'Barlow Condensed';margin:0}
+.ks-site .ks-tile-info b{font-size:11px;letter-spacing:.12em;align-self:center}
+.ks-site .ks-brand-story{padding:115px 8vw 125px;display:grid;grid-template-columns:1.4fr .6fr;gap:6vw;align-items:end;background:#eae8e2;color:#141414}
+.ks-site .ks-brand-story .ks-overline{color:#5c5c5c;margin-bottom:30px}
+.ks-site .ks-brand-story h2 em{font-style:normal;color:#888783}
+.ks-site .ks-brand-story p{font-size:15px;line-height:1.9;margin-bottom:30px;color:#474747}
+/* About page */
+.ks-site .ks-about-hero{height:74svh;min-height:590px;position:relative;display:flex;align-items:end;overflow:hidden}
+.ks-site .ks-about-visual{position:absolute;inset:0;background:url('/audi-garage.jpg.png') center 40% / cover;filter:grayscale(.55) brightness(.58)}
+.ks-site .ks-about-overlay{position:absolute;inset:0;background:linear-gradient(0deg,#000b,transparent 70%),linear-gradient(90deg,#0007,transparent)}
+.ks-site .ks-about-heading{z-index:1;position:relative;padding:90px 8vw;max-width:1050px}
+.ks-site .ks-about-heading h1{font:800 clamp(85px,11vw,180px)/.87 'Barlow Condensed',Impact,sans-serif;margin:28px 0}
+.ks-site .ks-about-heading p{font-size:15px;color:#e0e0de}
+.ks-site .ks-about-statement{background:#f0eee9;color:#111;padding:110px 8vw 135px}
+.ks-site .ks-about-statement-grid{display:grid;grid-template-columns:1.1fr .85fr;gap:8vw;margin-top:90px}
+.ks-site .ks-about-statement h2 em{font-style:normal;color:#878581}
+.ks-site .ks-about-statement-grid p{font-size:15px;line-height:2;color:#404040;margin:0 0 24px}
+.ks-site .ks-about-image-break{height:560px;background:url('/audi-garage.jpg.png') center 58% /cover;position:relative;display:flex;align-items:end;padding:50px 8vw}
+.ks-site .ks-about-image-shade{position:absolute;inset:0;background:linear-gradient(0deg,#0009,transparent 65%)}
+.ks-site .ks-about-image-break span{z-index:1;position:relative;font-size:10px;letter-spacing:.24em}
+.ks-site .ks-about-principles{padding:110px 8vw 125px}
+.ks-site .ks-about-principles .ks-section-meta{color:#9da0a1}
+.ks-site .ks-principles{display:grid;grid-template-columns:repeat(3,1fr);gap:45px;margin-top:90px}
+.ks-site .ks-principles article{border-top:1px solid #555;padding-top:22px}
+.ks-site .ks-principles article>span{font-size:11px;color:#bababa}
+.ks-site .ks-principles h3{font:800 clamp(46px,5vw,80px) 'Barlow Condensed';margin:45px 0 15px}
+.ks-site .ks-principles p{font-size:14px;line-height:1.85;color:#bdbdbd}
+.ks-site .ks-about-parent{padding:115px 8vw;background:#e8e6e1;color:#111;display:grid;grid-template-columns:1.3fr .7fr;gap:7vw;align-items:end}
+.ks-site .ks-about-parent .ks-overline{color:#555;margin-bottom:27px}
+.ks-site .ks-about-parent h2 em{font-style:normal;color:#767470}
+.ks-site .ks-about-parent p{font-size:15px;line-height:1.9;color:#484848;margin-bottom:29px}
+.ks-site .ks-about-parent .ks-outline-btn{border-color:#111;color:#111}
+.ks-site .ks-about-parent .ks-outline-btn:hover{background:#111;color:#fff}
+/* Studio restyling: retain functional controls, use simple motorsport configurator */
+.ks-studio .studio-head{padding:70px 7vw 60px;background:#f0eee9;color:#111}
+.ks-studio .studio-index{border-color:#b8b7b2;color:#74736f;font-size:10px}
+.ks-studio .studio-head .kicker{color:#777}
+.ks-studio .studio-head h1{font-size:clamp(72px,8vw,125px);font-weight:800;letter-spacing:-.01em;margin:15px 0}
+.ks-studio .studio-head h1 em{color:#7c7c78}
+.ks-studio .studio-head p{color:#555;font-size:14px}
+.ks-studio .studio-layout{grid-template-columns:minmax(225px,285px) minmax(320px,1fr) minmax(210px,270px);gap:1px;background:#333;padding:1px}
+.ks-studio .panel,.ks-studio .showroom{border:0;border-radius:0;background:#141414}
+.ks-studio .panel{padding:30px 25px}
+.ks-studio .panel-heading{color:#f0eee9;border-color:#494949}
+.ks-studio .panel label{color:#b9b9b9}
+.ks-studio .panel select{background:#222;border:1px solid #575757;color:#fff;border-radius:0}
+.ks-studio .field-title{color:#d8d8d8}
+.ks-studio .swatches button.selected{outline-color:#fff}
+.ks-studio .wheels button{background:#242424;border:1px solid #595959;border-radius:0;color:#dedede}
+.ks-studio .wheels button.selected{border-color:#f7f7f7;color:#fff}
+.ks-studio .panel-actions .gold-btn{background:#eae8e2;border:1px solid #eae8e2;color:#161616;border-radius:0}
+.ks-studio .panel-actions .ghost-btn{background:transparent;color:#f5f5f5;border:1px solid #888;border-radius:0}
+.ks-studio .showroom{background:#0e0e0e}
+.ks-studio .showroom-title h2{font-size:clamp(45px,4vw,75px);letter-spacing:-.01em}
+.ks-studio .showroom-title h2 em{color:#c2c1be}
+.ks-studio .showroom-top{color:#b5b5b5}
+.ks-studio .showroom-top span:last-child{color:#e7e7e7}
+.ks-studio .showroom-photo{filter:brightness(.79) saturate(.52)}
+.ks-studio .paint-chip{border-color:#aaa;background:#000a}
+.ks-studio .showroom-features{background:#333}
+.ks-studio .showroom-features>div{background:#161616;border:0}
+.ks-studio .showroom-features small{color:#b8b8b8}
+.ks-studio .market h3 em{color:#c2c1bd}
+.ks-studio .market-item{border-color:#555}
+.ks-studio .market-item>div{background:#292929;color:#eee}
+.ks-studio .market-item small{color:#aaa}
+.ks-studio .studio-bottom{background:#eae8e2;color:#111;border:0;padding:24px 5vw}
+.ks-studio .studio-bottom button{background:#111;color:#fff;padding:16px 22px}
+.ks-studio .bottom-note{background:#111;color:#b1b1b1!important;margin:0;padding:25px 5vw}
+.ks-site .site-footer{background:#0a0a0a;display:block;border-color:#444;color:#ddd;padding:75px 7vw 0}
+.ks-site .footer-inner{grid-template-columns:1.2fr .65fr 1fr;gap:6vw}
+.ks-site .footer-brand p,.ks-site .footer-company p{color:#a6a6a6}
+.ks-site .footer-by,.ks-site .footer-links a{color:#bbb}
+.ks-site .footer-company h3,.ks-site .footer-links h3{color:#e0e0dd}
+.ks-site .footer-company>a,.ks-site .footer-by a{color:#efefec}
+.ks-site .footer-bottom{border-color:#373737;color:#999}
+@media(max-width:1120px){
+.ks-site .ks-editorial-head,.ks-site .ks-intro-columns,.ks-site .ks-brand-story,.ks-site .ks-about-statement-grid,.ks-site .ks-about-parent{gap:40px}
+.ks-studio .studio-layout{grid-template-columns:260px minmax(0,1fr)}
+.ks-studio .market{grid-column:1/-1}
+}
+@media(max-width:820px){
+.ks-site .ks-nav{height:68px;padding:0 5vw}
+.ks-site .ks-nav nav{gap:13px}
+.ks-site .ks-nav nav a{font-size:9px}
+.ks-site .ks-nav-action{display:none}
+.ks-site .ks-brand img{width:96px}
+.ks-site .ks-hero{height:calc(88svh - 68px);min-height:590px}
+.ks-site .ks-hero-copy{margin:80px 6vw 0}
+.ks-site .ks-hero-copy h1{font-size:clamp(68px,12vw,113px)}
+.ks-site .ks-intro,.ks-site .ks-editorial,.ks-site .ks-about-statement,.ks-site .ks-about-principles{padding:75px 6vw}
+.ks-site .ks-intro-columns,.ks-site .ks-editorial-head,.ks-site .ks-brand-story,.ks-site .ks-about-statement-grid,.ks-site .ks-about-parent{grid-template-columns:1fr}
+.ks-site .ks-intro-columns,.ks-site .ks-about-statement-grid{margin-top:50px}
+.ks-site .ks-intro h2,.ks-site .ks-editorial h2,.ks-site .ks-brand-story h2,.ks-site .ks-about-statement h2,.ks-site .ks-about-parent h2{font-size:clamp(61px,10vw,99px)}
+.ks-site .ks-spotlight{min-height:590px}
+.ks-site .ks-editorial-grid{grid-template-columns:1fr}
+.ks-site .ks-editorial-tile{height:430px}
+.ks-site .ks-principles{gap:22px}
+.ks-site .ks-about-heading h1{font-size:clamp(75px,12vw,120px)}
+.ks-site .ks-about-parent,.ks-site .ks-brand-story{padding:80px 6vw}
+.ks-studio .studio-layout{display:flex;flex-direction:column}
+.ks-site .footer-inner{grid-template-columns:1fr 1fr}
+.ks-site .footer-brand{grid-column:1/-1}
+}
+@media(max-width:520px){
+.ks-site .ks-nav{padding:0 15px}
+.ks-site .ks-nav nav{gap:10px}
+.ks-site .ks-nav nav a{font-size:8px;letter-spacing:.05em}
+.ks-site .ks-brand img{width:83px}
+.ks-site .ks-hero{min-height:580px;height:81svh}
+.ks-site .ks-hero-photo{background-position:59% center}
+.ks-site .ks-hero-tint{background:linear-gradient(90deg,#000b,#0006),linear-gradient(0deg,#000b,transparent 60%)}
+.ks-site .ks-hero-copy{margin:65px 24px 0}
+.ks-site .ks-hero-copy h1{font-size:clamp(62px,14vw,83px)}
+.ks-site .ks-hero-copy p{font-size:13px}
+.ks-site .ks-hero-head{top:25px}
+.ks-site .ks-hero-head span:last-child{display:none}
+.ks-site .ks-intro h2,.ks-site .ks-editorial h2,.ks-site .ks-brand-story h2,.ks-site .ks-about-statement h2,.ks-site .ks-about-parent h2{font-size:clamp(55px,13vw,78px)}
+.ks-site .ks-spotlight{min-height:580px}
+.ks-site .ks-spotlight h2{font-size:70px}
+.ks-site .ks-spotlight-content{padding:65px 6vw}
+.ks-site .ks-editorial-tile{height:340px}
+.ks-site .ks-editorial-head{margin-top:50px}
+.ks-site .ks-editorial-grid{margin-top:40px}
+.ks-site .ks-about-hero{height:65svh;min-height:470px}
+.ks-site .ks-about-heading{padding:65px 6vw}
+.ks-site .ks-about-heading h1{font-size:76px}
+.ks-site .ks-about-image-break{height:340px}
+.ks-site .ks-principles{grid-template-columns:1fr;gap:25px;margin-top:55px}
+.ks-site .ks-principles h3{margin:25px 0 8px}
+.ks-site .footer-inner{grid-template-columns:1fr}
+.ks-site .footer-brand{grid-column:auto}
+.ks-site .site-footer{padding:52px 6vw 0}
+.ks-studio .studio-head{padding:45px 6vw}
+.ks-studio .studio-head h1{font-size:75px}
+.ks-studio .showroom-image{height:365px}
+}
+@media(prefers-reduced-motion:reduce){.ks-site *, .ks-site *:before,.ks-site *:after{transition:none!important;scroll-behavior:auto!important}}
