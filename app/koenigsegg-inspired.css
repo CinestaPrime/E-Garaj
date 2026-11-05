@@ -337,3 +337,32 @@
 }
 }
 @media(prefers-reduced-motion:reduce){.ks-site .ks-menu-shell.ks-menu-drawer{animation:none!important;will-change:auto}}
+
+
+/* Refined drawer typography and restored menu label */
+.ks-site .ks-menu-drawer .ks-menu-eyebrow{
+ display:block;
+ margin:0 0 22px;
+ color:#85837f;
+ font-family:'DM Sans',Arial,sans-serif;
+ font-weight:700;
+ font-size:11px;
+ letter-spacing:.2em;
+}
+.ks-site .ks-menu-drawer .ks-menu-nav nav{margin-top:0}
+.ks-site .ks-menu-drawer .ks-menu-nav nav a{
+ grid-template-columns:minmax(0,1fr) 18px;
+ font-family:'DM Sans',Arial,sans-serif;
+ font-size:17px;
+ font-weight:600;
+ line-height:1.4;
+ letter-spacing:.025em;
+ padding:19px 0;
+}
+.ks-site .ks-menu-drawer .ks-menu-arrow{font-size:16px}
+@media(max-width:520px){
+.ks-site .ks-menu-drawer .ks-menu-nav nav a{
+ font-size:16px;
+ padding:18px 0;
+}
+}
