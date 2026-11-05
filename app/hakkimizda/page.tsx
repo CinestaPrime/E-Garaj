@@ -13,14 +13,14 @@ export default function AboutPage() {
       <nav><Link href="/">ANA SAYFA</Link><Link href="/studio">ARAÇ TASARIMI</Link><Link href="/#features">UYUMLU ÜRÜNLER</Link><Link className="active" href="/hakkimizda">HAKKIMIZDA</Link></nav>
       <Link className="navbtn" href="/studio">GARAJA GİR ↗</Link>
     </header>
-    <section className="about-hero">
+    <section className="about-hero"><div className="about-grid-mark" aria-hidden="true">EG / 26</div>
       <div className="about-hero-inner">
         <small className="kicker">CINESTAAI / E-GARAJ</small>
         <h1>YENİ NESİL<br/><em>DİJİTAL GARAJ.</em></h1>
         <p>Otomobil tutkusunu dijital tasarımla buluşturan bir deneyim.</p>
       </div>
     </section>
-    <section className="about-content">
+    <section className="about-content"><div className="section-rule"><span>E-GARAJ / KURUMSAL</span><span>01 — 03</span></div>
       <div className="about-intro">
         <small className="kicker">HAKKIMIZDA</small>
         <h2>Bir garajdan<br/><em>çok daha fazlası.</em></h2>
