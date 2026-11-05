@@ -19,7 +19,7 @@ export default function SiteHeader({active="home"}:{active?:"home"|"studio"|"abo
  return <>
   <header className="ks-nav ks-nav-minimal">
    <Link href="/" className="ks-brand" aria-label="E-GARAJ ana sayfa"><img src="/e-garaj-logo.svg" alt="E-GARAJ"/></Link>
-   <div className="ks-nav-right"><span className="ks-nav-caption">DIGITAL AUTOMOTIVE EXPERIENCE</span><button ref={triggerRef} type="button" className="ks-menu-trigger" aria-expanded={open} aria-controls="ks-menu-panel" onClick={()=>setOpen(true)}>MENÜ <span className="ks-menu-bars" aria-hidden="true"><i/><i/></span></button></div>
+   <div className="ks-nav-right"><button ref={triggerRef} type="button" className="ks-menu-trigger" aria-expanded={open} aria-controls="ks-menu-panel" onClick={()=>setOpen(true)}>MENÜ <span className="ks-menu-bars" aria-hidden="true"><i/><i/></span></button></div>
   </header>
   {open&&<div className="ks-menu-overlay" id="ks-menu-panel" role="dialog" aria-modal="true" aria-label="E-Garaj navigasyon menüsü">
    <div className="ks-menu-shell">
