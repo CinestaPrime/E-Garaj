@@ -366,3 +366,12 @@
  padding:18px 0;
 }
 }
+
+
+/* Metallic wordmark proportions */
+.ks-site .ks-nav.ks-nav-minimal .ks-brand img{width:174px;max-width:38vw;max-height:40px;height:auto;object-fit:contain}
+.ks-site .ks-menu-drawer .ks-menu-top img{width:168px;max-width:47vw;max-height:42px;height:auto;object-fit:contain;filter:brightness(.32)}
+@media(max-width:520px){
+.ks-site .ks-nav.ks-nav-minimal .ks-brand img{width:137px;max-width:47vw}
+.ks-site .ks-menu-drawer .ks-menu-top img{width:140px}
+}
