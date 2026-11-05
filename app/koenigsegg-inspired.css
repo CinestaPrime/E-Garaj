@@ -255,3 +255,24 @@
 .ks-studio .ks-nav.ks-nav-minimal .ks-nav-caption{color:#555;text-shadow:none}
 @media(max-width:820px){.ks-site .ks-hero{height:90svh}.ks-site .ks-about-hero{height:74svh}}
 @media(max-width:520px){.ks-site .ks-hero{height:84svh}.ks-site .ks-about-hero{height:67svh}}
+
+
+/* No separate header band on any page, including Studio */
+.ks-site .ks-nav.ks-nav-minimal,
+.ks-studio .ks-nav.ks-nav-minimal{
+  position:absolute!important;
+  top:0;left:0;right:0;
+  width:100%;
+  margin:0;
+  background:none!important;
+  background-color:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  backdrop-filter:none!important;
+  -webkit-backdrop-filter:none!important;
+}
+.ks-site .ks-nav.ks-nav-minimal::before,
+.ks-site .ks-nav.ks-nav-minimal::after{content:none!important}
+.ks-studio .studio-head{padding-top:145px}
+@media(max-width:820px){.ks-studio .studio-head{padding-top:120px}}
+@media(max-width:520px){.ks-studio .studio-head{padding-top:110px}}
