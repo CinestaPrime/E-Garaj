@@ -1,0 +1,4 @@
+import Link from "next/link";
+export default function SiteHeader({active="home"}:{active?:"home"|"studio"|"about"}){
+return <header className="ks-nav"><Link href="/" className="ks-brand" aria-label="E-GARAJ ana sayfa"><img src="/e-garaj-logo.svg" alt="E-GARAJ"/></Link><nav aria-label="Ana menü"><Link className={active==="home"?"active":""} href="/">ANA SAYFA</Link><Link className={active==="studio"?"active":""} href="/studio">ARAÇ TASARIMI</Link><Link className={active==="about"?"active":""} href="/hakkimizda">HAKKIMIZDA</Link></nav><Link className="ks-nav-action" href="/studio">STÜDYOYA GİR <span>↗</span></Link></header>
+}
