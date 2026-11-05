@@ -205,3 +205,6 @@ body{background:var(--night);color:#e9f1f2}
  .showroom-top{font-size:8px}
 }
 @media(prefers-reduced-motion:reduce){.feature,.gold-btn,.ghost-btn{transition:none}}
+
+/* Ensure corporate footer overrides the legacy footer flex rule */
+.site-footer{display:block;justify-content:initial;flex-wrap:initial;gap:0;font-size:inherit}
