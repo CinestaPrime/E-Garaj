@@ -238,3 +238,20 @@
  .ks-site .ks-menu-footer{font-size:8px}
 }
 @media(prefers-reduced-motion:reduce){.ks-site .ks-menu-overlay{animation:none}}
+
+
+/* Transparent, floating header over cinematic images */
+.ks-site .ks-nav.ks-nav-minimal{position:absolute;top:0;left:0;right:0;width:100%;z-index:80;background:transparent;border:0;box-shadow:none}
+.ks-site .ks-nav.ks-nav-minimal:before,.ks-site .ks-nav.ks-nav-minimal:after{display:none}
+.ks-site .ks-nav.ks-nav-minimal .ks-brand,.ks-site .ks-nav.ks-nav-minimal .ks-nav-right{position:relative;z-index:2}
+.ks-site .ks-nav.ks-nav-minimal .ks-menu-trigger{color:#fff;text-shadow:0 1px 12px #0009}
+.ks-site .ks-nav.ks-nav-minimal .ks-menu-bars i{background:#fff;box-shadow:0 1px 10px #0008}
+.ks-site .ks-nav.ks-nav-minimal .ks-nav-caption{color:#e4e2de;text-shadow:0 1px 12px #000b}
+.ks-site .ks-hero{height:100svh}
+.ks-site .ks-about-hero{height:80svh}
+.ks-studio .ks-nav.ks-nav-minimal{position:relative;background:#f0eee9;border:0;border-bottom:1px solid #d9d7d1}
+.ks-studio .ks-nav.ks-nav-minimal .ks-menu-trigger{color:#151515;text-shadow:none}
+.ks-studio .ks-nav.ks-nav-minimal .ks-menu-bars i{background:#151515;box-shadow:none}
+.ks-studio .ks-nav.ks-nav-minimal .ks-nav-caption{color:#555;text-shadow:none}
+@media(max-width:820px){.ks-site .ks-hero{height:90svh}.ks-site .ks-about-hero{height:74svh}}
+@media(max-width:520px){.ks-site .ks-hero{height:84svh}.ks-site .ks-about-hero{height:67svh}}
