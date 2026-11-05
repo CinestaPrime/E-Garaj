@@ -307,21 +307,33 @@
 @media(prefers-reduced-motion:reduce){.ks-site .ks-menu-shell.ks-menu-drawer{animation:none}}
 
 
-/* Refined menu entrance: soft reveal instead of horizontal slide */
-.ks-site .ks-menu-overlay.ks-menu-drawer-overlay{animation:ks-backdrop-fade .28s ease-out both}
-.ks-site .ks-menu-shell.ks-menu-drawer{transform-origin:top right;animation:ks-panel-reveal .42s cubic-bezier(.2,.75,.2,1) both}
-.ks-site .ks-menu-drawer .ks-menu-top{animation:ks-item-reveal .38s ease-out .09s both}
-.ks-site .ks-menu-drawer .ks-menu-eyebrow{display:block;animation:ks-item-reveal .4s ease-out .14s both}
-.ks-site .ks-menu-drawer .ks-menu-nav nav a{animation:ks-item-reveal .42s ease-out both}
-.ks-site .ks-menu-drawer .ks-menu-nav nav a:nth-child(1){animation-delay:.17s}
-.ks-site .ks-menu-drawer .ks-menu-nav nav a:nth-child(2){animation-delay:.23s}
-.ks-site .ks-menu-drawer .ks-menu-nav nav a:nth-child(3){animation-delay:.29s}
-.ks-site .ks-menu-drawer .ks-menu-footer{animation:ks-item-reveal .4s ease-out .34s both}
-@keyframes ks-backdrop-fade{from{opacity:0}to{opacity:1}}
-@keyframes ks-panel-reveal{from{opacity:0;transform:scale(.965) translateY(-12px);filter:blur(5px)}to{opacity:1;transform:scale(1) translateY(0);filter:blur(0)}}
-@keyframes ks-item-reveal{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
-@media(prefers-reduced-motion:reduce){
-.ks-site .ks-menu-overlay.ks-menu-drawer-overlay,.ks-site .ks-menu-shell.ks-menu-drawer,
-.ks-site .ks-menu-drawer .ks-menu-top,.ks-site .ks-menu-drawer .ks-menu-eyebrow,
-.ks-site .ks-menu-drawer .ks-menu-nav nav a,.ks-site .ks-menu-drawer .ks-menu-footer{animation:none!important}
+
+
+/* Lightweight menu opening: GPU-friendly short transform, no blur or stagger */
+.ks-site .ks-menu-overlay.ks-menu-drawer-overlay{animation:none}
+.ks-site .ks-menu-shell.ks-menu-drawer{
+ animation:ks-drawer-fast .17s ease-out both;
+ transform-origin:right center;
+ will-change:transform;
 }
+.ks-site .ks-menu-drawer .ks-menu-top,
+.ks-site .ks-menu-drawer .ks-menu-nav nav a{animation:none}
+.ks-site .ks-menu-drawer .ks-menu-body{padding:38px 0 24px}
+.ks-site .ks-menu-drawer .ks-menu-nav nav{margin-top:0}
+.ks-site .ks-menu-drawer .ks-menu-nav nav a{
+ grid-template-columns:minmax(0,1fr) 18px;
+ gap:10px;
+ font:600 27px/1.2 'Barlow Condensed',Impact,sans-serif;
+ padding:19px 0;
+ transition:color .15s ease;
+}
+.ks-site .ks-menu-drawer .ks-menu-nav nav a:hover{padding-left:0}
+.ks-site .ks-menu-drawer .ks-menu-arrow{font-size:16px}
+@keyframes ks-drawer-fast{from{transform:translateX(20px);opacity:.85}to{transform:translateX(0);opacity:1}}
+@media(max-width:520px){
+.ks-site .ks-menu-drawer .ks-menu-nav nav a{
+ grid-template-columns:minmax(0,1fr) 18px;
+ font-size:25px;padding:18px 0;
+}
+}
+@media(prefers-reduced-motion:reduce){.ks-site .ks-menu-shell.ks-menu-drawer{animation:none!important;will-change:auto}}
