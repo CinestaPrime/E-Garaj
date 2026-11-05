@@ -24,7 +24,7 @@ export default function BrandFooter() {
       </div>
       <div className="footer-bottom">
         <span>© 2026 E-GARAJ · CINESTAAI</span>
-        <span>Bu mağazadaki markalarla resmî bağlantısı bulunmamaktadır.</span>
+        <span>Bu mağazadaki hizmetlerin markalarla resmî bağlantısı bulunmamaktadır.</span>
       </div>
     </footer>
   );
