@@ -399,3 +399,8 @@
 .ks-site .ks-hero{background:linear-gradient(128deg,#36383c 0%,#1d2228 52%,#474a4b 100%)}
 .ks-site .ks-hero-video{opacity:0}
 .ks-site .ks-hero-video.ks-hero-video-ready{opacity:1}
+
+/* Refined, smaller homepage hero typography */
+.ks-site .ks-hero-copy h1{font-size:clamp(58px,7.5vw,116px)}
+@media(max-width:900px){.ks-site .ks-hero-copy h1{font-size:clamp(54px,10vw,88px)}}
+@media(max-width:520px){.ks-site .ks-hero-copy h1{font-size:clamp(44px,11vw,66px)}}
