@@ -540,3 +540,12 @@
   opacity:1;
  }
 }
+
+/* Lift the centered homepage headline and description without changing their fade-in. */
+.ks-site .ks-hero-copy.ks-hero-copy-cinematic{
+ position:relative;
+ top:-48px;
+}
+@media(max-width:520px){
+ .ks-site .ks-hero-copy.ks-hero-copy-cinematic{top:-30px}
+}
