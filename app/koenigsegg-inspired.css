@@ -508,3 +508,39 @@
  .ks-site .ks-hero-copy{margin:0 auto;padding:65px 20px 0}
  .ks-site .ks-hero-copy p{margin:0 auto 27px;max-width:360px}
 }
+
+
+/* Timed cinematic reveal after the hero film has played for 14 seconds. */
+.ks-site .ks-hero-copy-cinematic{
+ visibility:hidden;
+ pointer-events:none;
+}
+.ks-site .ks-hero-copy-cinematic.is-visible{
+ visibility:visible;
+ pointer-events:auto;
+}
+.ks-site .ks-hero-copy-cinematic h1,
+.ks-site .ks-hero-copy-cinematic p{
+ opacity:0;
+ transform:translate3d(0,28px,0);
+ filter:blur(8px);
+}
+.ks-site .ks-hero-copy-cinematic.is-visible h1{
+ animation:ks-cinematic-title 1.75s cubic-bezier(.22,1,.36,1) both;
+}
+.ks-site .ks-hero-copy-cinematic.is-visible p{
+ animation:ks-cinematic-title 1.8s cubic-bezier(.22,1,.36,1) .45s both;
+}
+@keyframes ks-cinematic-title{
+ from{opacity:0;transform:translate3d(0,28px,0);filter:blur(8px)}
+ to{opacity:1;transform:translate3d(0,0,0);filter:blur(0)}
+}
+@media(prefers-reduced-motion:reduce){
+ .ks-site .ks-hero-copy-cinematic.is-visible h1,
+ .ks-site .ks-hero-copy-cinematic.is-visible p{
+  animation:none;
+  opacity:1;
+  transform:none;
+  filter:none;
+ }
+}
