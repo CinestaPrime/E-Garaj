@@ -21,8 +21,12 @@ export default function BrandFooter({studio=false}:{studio?:boolean}) {
         </nav>
         <nav className="footer-links" aria-label="E-Garage Dünyası">
           <h3>E-GARAGE DÜNYASI</h3>
-          <Link href="/bilgi/genel-bakis">Genel Bakış</Link>
-          <Link href="/bilgi/teknoloji">Teknoloji</Link>
+          <Link href="/bilgi/surdurulebilirlik">Sürdürülebilirlik</Link>
+          <Link href="/bilgi/tasarim">Tasarım</Link>
+          <Link href="/bilgi/servisler">Servisler</Link>
+          <Link href="/bilgi/servis-hizmetleri">Servis Hizmetleri</Link>
+          <Link href="/bilgi/modeller">Modeller</Link>
+          <Link href="/bilgi/aracinizi-taniyin">Aracınızı Tanıyın</Link>
         </nav>
       </div>
       <div className="footer-bottom">
