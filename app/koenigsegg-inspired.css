@@ -473,3 +473,19 @@
  .ks-site .ks-spotlight-overlay{background:linear-gradient(90deg,rgba(0,0,0,.82),rgba(0,0,0,.21) 92%),linear-gradient(0deg,rgba(0,0,0,.65),transparent 76%)}
  .ks-site .ks-brand-story>div:first-child{text-align:left}
 }
+
+
+/* Only the vehicle design page gets a charcoal header; all other pages remain transparent. */
+.ks-site.ks-studio .ks-nav.ks-nav-minimal{
+ background:#343639!important;
+ background-color:#343639!important;
+ border-bottom:1px solid rgba(255,255,255,.13)!important;
+}
+.ks-site.ks-studio .ks-nav.ks-nav-minimal .ks-menu-trigger{
+ color:#f6f6f6;
+ text-shadow:none;
+}
+.ks-site.ks-studio .ks-nav.ks-nav-minimal .ks-menu-bars i{
+ background:#f6f6f6;
+ box-shadow:none;
+}
