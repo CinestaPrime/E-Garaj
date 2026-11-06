@@ -797,3 +797,10 @@
   padding:14px 24px;
  }
 }
+
+/* Align the intro heading visually with its left-hand description on desktop. */
+@media(min-width:821px){
+ .ks-site .ks-intro-columns>h2{
+  transform:translateY(-36px);
+ }
+}
