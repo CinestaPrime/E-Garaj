@@ -21,15 +21,31 @@ export default function AboutPage(){
    </div>
    <div className="ks-about-new-hero-bottom"><span>TASARIMIN SINIRLARINI YENİDEN DÜŞÜN</span><span>↓ KAYDIR</span></div>
   </section>
-  <section className="ks-about-new-manifesto">
-   <div className="ks-about-new-meta"><span>01 / HİKÂYEMİZ</span><span>DİJİTAL OTOMOTİV DENEYİMİ</span></div>
-   <div className="ks-about-new-manifesto-grid">
-    <h2>BİR ARAÇTAN<br/><span>ÇOK DAHA</span><br/>FAZLASI</h2>
-    <div className="ks-about-new-copy">
-     <span className="ks-about-new-smallline">BİZİ HAREKETE GEÇİREN ŞEY</span>
-     <p>Otomobil, bizim için yalnızca bir ulaşım aracı değil; kişiliğin, zevkin ve özgürlüğün bir ifadesi. E-Garaj bu düşünceden doğdu: otomobil tutkusunu herkesin keşfedebileceği, kişiselleştirebileceği ve kendi tarzına dönüştürebileceği dijital bir deneyime taşımak.</p>
-     <p>Bugün araç stüdyomuzda modelleri keşfetmeyi, gövde renklerini denemeyi ve tercihlerini kişisel garajında saklamayı mümkün kılan bir temel oluşturuyoruz. Yarın ise uyumlu ürünleri, daha fazla markayı ve otomotiv dünyasının farklı paydaşlarını aynı platformda buluşturmayı hedefliyoruz.</p>
+  <section className="ks-about-new-manifesto" aria-label="E-Garaj hakkında ve kurucusu">
+   <div className="ks-about-new-meta"><span>01 / BİZ KİMİZ</span><span>E-GARAGE / CINESTAAI</span></div>
+   <div className="ks-about-new-story-intro">
+    <span className="ks-about-new-smallline">E-GARAJ NEDİR, NEDEN KURULDU?</span>
+    <h2>OTOMOBİL TUTKUSUNU<br/><em>TEKNOLOJİYLE BULUŞTURUYORUZ</em></h2>
+    <p>E-Garaj (E-Garage), otomobil sahiplerinin araçlarını keşfetme, kişiselleştirme ve araçlarına uygun ürünlere ulaşma biçimini yeniden düşünmek için geliştirdiğimiz bir dijital otomotiv platformudur.</p>
+   </div>
+   <div className="ks-about-new-story-columns">
+    <div className="ks-about-new-story-body">
+     <h3>BİR FİKİRDEN DİJİTAL GARAJA</h3>
+     <p>Otomobil dünyasında bir jant, bir gövde detayı ya da küçük bir aksesuar bile aracın karakterini bütünüyle değiştirebilir. Ancak kullanıcıların kendi araçlarına uygun seçenekleri bulması ve bir ürünü satın almadan önce otomobillerinde nasıl görüneceğini hayal etmesi her zaman kolay değil. E-Garaj'ı tam da bu ihtiyaca cevap vermek için tasarladık.</p>
+     <p>Platformun merkezinde, otomobil tutkusuyla teknolojiyi bir araya getiren kişisel bir araç stüdyosu bulunuyor. Kullanıcılar araçlarının marka, model ve yıl bilgilerini seçebiliyor; mevcut dijital stüdyo deneyiminde gövde renklerini inceleyip tasarım tercihlerini kaydedebiliyor. Bu temel üzerine inşa ettiğimiz hedefimiz, uyumlu jant, yedek parça ve aksesuar seçeneklerini kişinin kendi otomobil modeli üzerinde dijital olarak deneyebildiği bir ekosistem oluşturmak.</p>
+     <h3>ALICI İLE OTOMOTİV SEKTÖRÜ ARASINDA YENİ BİR KÖPRÜ</h3>
+     <p>E-Garaj yalnızca bir araç tasarım alanı değil; otomobil sahipleriyle aksesuar, yedek parça ve otomotiv ürünleri sunan işletmeleri aynı dijital deneyimde buluşturmayı amaçlayan bir girişim. Kullanıcının aracına uygun ürünleri keşfedebilmesi, farklı seçenekleri karşılaştırabilmesi ve gelecekte bunların otomobilindeki görünümünü değerlendirebilmesi için çalışıyoruz.</p>
+     <p>Bu yaklaşımla otomotiv satış ve keşif sürecini daha görsel, daha kişisel ve daha anlaşılır hale getirmeyi; Türkiye'den başlayarak zamanla daha geniş pazarlara açılan bir otomotiv teknoloji platformu geliştirmeyi hedefliyoruz.</p>
     </div>
+    <aside className="ks-about-new-founder">
+     <span className="ks-about-new-founder-kicker">KURUCUSUNDAN</span>
+     <h3>EMİN RIZA<br/>PİŞKİN</h3>
+     <span className="ks-about-new-founder-role">E-GARAJ KURUCUSU · CINESTAAI KURUCUSU</span>
+     <div className="ks-about-new-founder-rule"/>
+     <p>E-Garaj, benim geliştirdiğim bir ürün ve CinestaAI bünyesinde tarafımızdan tasarlanan bir dijital otomotiv girişimidir. CinestaAI'ın kurucusu olarak teknoloji, yazılım ve kullanıcı deneyimini otomobil tutkusuyla buluşturmayı hedefliyorum.</p>
+     <p>Vizyonumuz; otomotiv aksesuar ve yedek parça sektöründe alıcılarla satıcıları daha güçlü biçimde bir araya getirmek, insanların seçtikleri ürünleri kendi araç marka ve modelleri üzerinde görerek daha bilinçli tercihler yapabilecekleri bir deneyim sunmak. Otomobil dünyasının dijital geleceğine bu anlayışla yön vermek istiyoruz.</p>
+     <span className="ks-about-new-founder-mark">E-GARAGE <span>×</span> CINESTAAI</span>
+    </aside>
    </div>
   </section>
   <section className="ks-about-new-quote" aria-label="E-Garaj yaklaşımı">
