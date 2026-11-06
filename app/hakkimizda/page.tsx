@@ -1,4 +1,3 @@
-import Link from "next/link";
 import SiteHeader from "../SiteHeader";
 import BrandFooter from "../BrandFooter";
 
@@ -16,7 +15,7 @@ export default function AboutPage(){
    <div className="ks-about-new-hero-top"><span>OTOMOBİLİN GELECEĞİNE BİR BAKIŞ</span></div>
    <div className="ks-about-new-hero-content">
     <span className="ks-about-new-eyebrow">E-GARAGE / BİZ KİMİZ</span>
-    <h1>TUTKUNUN<br/><em>ÖTESİNDE.</em></h1>
+    <h1>TUTKUNUN<br/><em>ÖTESİNDE</em></h1>
     <p>Her otomobil bir karakter taşır. Biz, o karaktere kendi imzanı atabileceğin yeni bir dijital dünya tasarlıyoruz.</p>
    </div>
    <div className="ks-about-new-hero-bottom"><span>TASARIMIN SINIRLARINI YENİDEN DÜŞÜN</span><span>↓ KAYDIR</span></div>
@@ -65,11 +64,6 @@ export default function AboutPage(){
   <section className="ks-about-new-company">
    <div><span className="ks-about-new-eyebrow">MARKA EKOSİSTEMİ</span><h2>TEKNOLOJİYLE<br/><em>ŞEKİLLENEN</em><br/>TUTKU.</h2></div>
    <div className="ks-about-new-company-copy"><p>E-Garaj, yapay zekâ, yazılım ve dijital ürün geliştirme alanlarına odaklanan <strong>CinestaAI</strong> tarafından hayata geçirilen bir otomotiv teknoloji girişimidir.</p><p>Amacımız; tasarım, keşif ve kişiselleştirme deneyimini teknolojiyle daha erişilebilir, akıcı ve etkileyici hale getirmek.</p><a href="https://cinestaai.com" target="_blank" rel="noopener noreferrer" className="ks-about-new-company-link">CINESTAAI'I KEŞFET <span>↗</span></a></div>
-  </section>
-  <section className="ks-about-new-cta">
-   <span>ŞİMDİ SENİN SIRAN</span>
-   <h2>HİKÂYENİ<br/><em>TASARLA.</em></h2>
-   <Link href="/studio">STÜDYOYA GİT <span>↗</span></Link>
   </section>
   <BrandFooter/>
  </main>;
