@@ -7,22 +7,59 @@ import type {Metadata} from "next";
 type Section={heading:string; paragraphs:string[]; bullets?:string[]};
 type InfoPage={title:string; intro:string; sections:Section[]};
 const pages:Record<string,InfoPage>={
- "genel-bakis":{
-  title:"Genel Bakış",
-  intro:"E-GARAGE, otomobil tutkusunu kişiselleştirme teknolojileri ve ürün keşfiyle bir araya getirmek üzere geliştirilen bir dijital otomotiv platformudur.",
+ "surdurulebilirlik":{
+  title:"Sürdürülebilirlik",
+  intro:"Otomotivde daha bilinçli seçimleri destekleyen, uzun ömürlü kullanım ve kaynak verimliliğini önemseyen bir dijital deneyim geliştirmeyi hedefliyoruz.",
   sections:[
-   {heading:"E-GARAGE nedir?",paragraphs:["CinestaAI bünyesinde geliştirilen E-GARAGE, kullanıcıların otomobil seçeneklerini dijital ortamda keşfetmesini, farklı tasarım tercihleri oluşturmasını ve kendi araçlarına uygun ürünlere ulaşmasını amaçlayan bir platformdur.","Otomobil sahipleri ile aksesuar, yedek parça ve otomotiv ürünleri sunan işletmeler arasında kullanıcı odaklı bir dijital köprü kurmayı hedefliyoruz."]},
-   {heading:"Bugün ne sunuyoruz?",paragraphs:["Araç stüdyomuzda örnek bir otomobilin 360 derece görünümünü incelemek, sunulan gövde renklerini denemek ve kişiselleştirme tercihlerini tarayıcıda saklamak mümkündür. Marka, model ve yıl seçimi gibi alanlar geliştirilmekte olan daha kapsamlı deneyimin altyapısını oluşturur."]},
-   {heading:"Nereye ilerliyoruz?",paragraphs:["Hedefimiz, uyumlu aksesuar ve yedek parça seçeneklerini kullanıcının kendi marka ve modelindeki araç üzerinde değerlendirebileceği bir ortam geliştirmek; ürün sağlayıcıları ile alıcıları aynı platformda buluşturmaktır.","Yeni modeller, ürün katalogları ve satıcı entegrasyonları aşamalı olarak geliştirilmeyi planladığımız özelliklerdir. Henüz aktif olmayan hizmetler, mevcut bir satın alma veya teslimat taahhüdü oluşturmaz."]}
+   {heading:"Bilinçli ürün tercihleri",paragraphs:["Bir otomobile uygun aksesuar veya parçayı doğru seçmek, gereksiz ürün siparişlerinin ve uyumsuzluk kaynaklı iade süreçlerinin azaltılmasına katkı sağlayabilir. E-GARAGE, ilerleyen aşamalarda araç bilgileriyle uyumlu ürünlerin daha anlaşılır biçimde keşfedilmesini hedefler.","Bu yaklaşımımız, tek başına doğrulanmış bir çevresel etki azaltımı iddiası değildir; platformun ürün geliştirme hedeflerinden biridir."]},
+   {heading:"Mevcut araçlara değer katmak",paragraphs:["Otomobil sahiplerinin mevcut araçlarını korumaya, bakımını sürdürmeye ve ihtiyaçlarına uygun parçaları değerlendirmeye yardımcı olacak bilgi ve dijital araçları geliştirmeyi amaçlıyoruz.","Daha uzun ömürlü kullanımı destekleyen ürünlerin ve bakım seçeneklerinin görünür olması, gelecekte kurulmasını hedeflediğimiz ekosistemin önemli bir parçasıdır."]},
+   {heading:"Dijital deneyimin rolü",paragraphs:["Ürünleri araç üzerinde dijital olarak değerlendirme fikri, kullanıcıların satın alma öncesinde seçeneklerini daha bilinçli karşılaştırmasına yardımcı olabilir.","Henüz ürünlerin çevresel etkilerine veya karbon ayak izine yönelik bir sertifikasyon ya da bağımsız doğrulama hizmeti sunmuyoruz."]}
   ]
  },
- "teknoloji":{
-  title:"Teknoloji",
-  intro:"Dijital araç keşfini daha görsel, anlaşılır ve kişisel hale getirecek teknolojiler üzerine çalışıyoruz.",
+ "tasarim":{
+  title:"Tasarım",
+  intro:"Aracınızın karakterini belirleyen detayları keşfetmek ve kişisel zevkinizi dijital ortamda ifade etmek için tasarladığımız deneyim.",
   sections:[
-   {heading:"Dijital araç stüdyosu",paragraphs:["E-GARAGE araç stüdyosu, web tarayıcısı üzerinden erişilebilen üç boyutlu bir otomobil önizleme deneyimi sunar. Desteklenen görsel seçenekler model üzerinde incelenebilir; kişiselleştirme tercihleri daha sonra yeniden açılmak üzere tarayıcıda saklanabilir."]},
-   {heading:"Araç ve ürün uyumluluğu",paragraphs:["Geliştirme vizyonumuzun merkezinde, otomobil marka, model ve yıl bilgileri ile aksesuar ve yedek parça kataloglarını ilişkilendiren bir ürün keşif deneyimi bulunur.","Planlanan sistemde kullanıcıların, uyumlu ürünleri seçtikleri araç üzerinde dijital olarak değerlendirebilmeleri ve seçenekleri daha bilinçli karşılaştırabilmeleri amaçlanır."]},
-   {heading:"Aşamalı geliştirme",paragraphs:["Platformun mevcut üç boyutlu örnek modeli ve bazı tercih kontrolleri bir prototip deneyimidir. Listelenen her marka, model veya ürün için ayrı bir üç boyutlu simülasyonun veya gerçek zamanlı uyumluluk doğrulamasının hazır olduğu anlamına gelmez.","CinestaAI bünyesinde kullanıcı deneyimi, görselleştirme ve ilgili yazılım altyapısını kademeli olarak geliştirmeye devam ediyoruz."]}
+   {heading:"Kişiselleştirme anlayışımız",paragraphs:["Gövde rengi, jant seçimi ve dış görünüşe ilişkin küçük ayrıntılar, bir aracın genel algısını değiştirebilir. E-GARAGE, bu seçenekleri sade bir arayüzde keşfetme fikri üzerine kuruludur.","Tasarım sürecinde kullanıcıların teknik ayrıntılar arasında kaybolmadan tercihlerine odaklanabilmesini önemsiyoruz."]},
+   {heading:"Dijital araç stüdyosu",paragraphs:["Mevcut araç stüdyosunda bir örnek üç boyutlu otomobil modeli üzerinden 360 derece önizleme ve desteklenen gövde renklerini değiştirme deneyimi sunulmaktadır. Tercihler tarayıcıda saklanıp tekrar görüntülenebilir.","Diğer model, yıl ve jant seçenekleri şu anda her durumda ayrı bir üç boyutlu görsele karşılık gelmemektedir; bu alanlar aşamalı olarak geliştirilmektedir."]},
+   {heading:"Geleceğin tasarım deneyimi",paragraphs:["Hedefimiz, farklı otomobil marka ve modelleri için uyumlu aksesuarların araç üzerinde nasıl görünebileceğini değerlendirmeye imkân tanıyan daha kapsamlı bir tasarım altyapısı kurmaktır.","Bu deneyim yaygınlaştırıldıkça ürün keşfi, araç modeli ve kişiselleştirme adımlarını tek bir akışta birleştirmeyi amaçlıyoruz."]}
+  ]
+ },
+ "servisler":{
+  title:"Servisler",
+  intro:"Otomobil sahipleri ile otomotiv sektöründeki işletmeleri daha kolay buluşturacak dijital servis ağı vizyonumuz.",
+  sections:[
+   {heading:"Servis ağı hedefimiz",paragraphs:["E-GARAGE, otomobil sahiplerinin bakım, montaj ve ilgili otomotiv hizmetlerine ulaşmasını kolaylaştıran bir servis keşif alanı geliştirmeyi hedeflemektedir.","Bölgesel işletmelerin ve uzmanlık alanlarının anlaşılır biçimde gösterilmesi, planladığımız iş ortaklığı ekosisteminin parçalarındandır."]},
+   {heading:"İşletmeler ve iş ortaklıkları",paragraphs:["Gelecekte kullanıcıların konum ve ihtiyaçlarına göre otomotiv hizmeti sağlayan işletmeleri keşfedebilecekleri bir yapı oluşturmayı amaçlıyoruz.","Herhangi bir işletmenin listelenmesi, doğrulanmış yetkili servis statüsü ya da belirli bir üretici adına hizmet yetkisi anlamına gelmez; bunlar için ayrıca açık doğrulama ve bilgilendirme gereklidir."]},
+   {heading:"Bugünkü hizmet kapsamı",paragraphs:["Servis ağı, gerçek zamanlı randevu, ücret teklifi ve servis kaydı gibi özellikler henüz bütünleşik ve aktif bir hizmet olarak sunulmamaktadır. Bu sayfa geliştirme vizyonumuzu açıklamak amacıyla hazırlanmıştır."]}
+  ]
+ },
+ "servis-hizmetleri":{
+  title:"Servis Hizmetleri",
+  intro:"Bakım, montaj ve ürün uygulama süreçlerini kullanıcılar için daha anlaşılır ve erişilebilir hale getirmeyi amaçlıyoruz.",
+  sections:[
+   {heading:"Bakım ve kontrol",paragraphs:["Periyodik bakım, kontrol ve araç güvenliğiyle ilgili hizmetlere erişimin, aracın marka ve modeline göre anlaşılır şekilde sunulmasını hedefliyoruz.","Bakım aralıkları ve teknik gereklilikler araç üreticisinin talimatlarına ve yetkili uzmanların değerlendirmesine göre belirlenmelidir."]},
+   {heading:"Aksesuar montajı",paragraphs:["Jant, iç ve dış aksesuarlar veya diğer uyumlu ürünlerin doğru uygulanması için montaj hizmetleri önemlidir. Gelecekte ürün keşfi ile uygun montaj veya servis seçeneklerini ilişkilendiren bir yönlendirme deneyimi geliştirmek istiyoruz.","Ürün uyumluluğu, montajın güvenli yapılması ve yasal düzenlemelere uygunluk, yetkin servisler tarafından değerlendirilmelidir."]},
+   {heading:"Randevu ve hizmet süreci",paragraphs:["İlerleyen aşamalarda servis bilgileri, talep oluşturma ve uygun hizmet seçeneklerinin karşılaştırılmasına yönelik işlevler değerlendirilmektedir.","Şu an bu sayfa üzerinden servis randevusu alınamaz; doğrulanmış fiyat veya işçilik garantisi verilmemektedir."]}
+  ]
+ },
+ "modeller":{
+  title:"Modeller",
+  intro:"Marka, model ve üretim yılına göre şekillenen kişisel otomobil deneyimine yönelik yaklaşımımız.",
+  sections:[
+   {heading:"Araç seçimi",paragraphs:["Otomobil modelleri arasında tasarım, ölçüler, donanım ve parça uyumluluğu açısından önemli farklılıklar bulunur. Bu nedenle kullanıcıların araçlarını marka, model ve yıl bilgisiyle tanımlayabildiği bir deneyim geliştirmeyi önemsiyoruz.","Araç stüdyosundaki seçici alanlar bu yaklaşımın başlangıcını oluşturur; tüm listelenen araçlar için ayrı bir üç boyutlu model henüz bulunmamaktadır."]},
+   {heading:"Başlangıç noktası",paragraphs:["Mevcut üç boyutlu önizleme deneyimi örnek bir Audi e-tron GT RS modeli üzerinde çalışmaktadır. Bu örnek araç, bütün marka ve modellerin desteklendiği anlamına gelmez.","Platformun ilerleyen aşamalarında araç verilerinin ve görselleştirme kapsamının genişletilmesi hedeflenmektedir."]},
+   {heading:"Araç ile ürünü eşleştirme",paragraphs:["Uzun vadeli hedefimiz, otomobil modelini ilgili aksesuar ve yedek parça seçenekleriyle eşleştirerek kullanıcılara daha isabetli ürün keşfi sunmaktır.","Bir ürünün teknik uygunluğu mutlaka üretici verileri, parça numarası ve uzman kontrolüyle doğrulanmalıdır."]}
+  ]
+ },
+ "aracinizi-taniyin":{
+  title:"Aracınızı Tanıyın",
+  intro:"Aracınıza uygun ürünleri değerlendirirken marka, model, üretim yılı ve teknik özelliklerin neden önemli olduğunu keşfedin.",
+  sections:[
+   {heading:"Aracınızı doğru tanımlayın",paragraphs:["Marka, model, üretim yılı ve varsa donanım paketi; araç için uygun parçaların belirlenmesinde temel bilgilerdir. Aynı modelin farklı yıllarında veya motor seçeneklerinde uyumluluk değişebilir.","Araç seçimini yaparken ruhsat, üretici dokümanları ve ilgili teknik bilgilerin doğru kullanılması önemlidir."]},
+   {heading:"Parça ve aksesuar uyumluluğu",paragraphs:["Bir parçanın yalnızca bir modele benzer görünmesi uygun olduğu anlamına gelmez. Ölçüler, bağlantı noktaları, elektrik sistemleri ve üretici tarafından belirlenen teknik koşullar dikkate alınmalıdır.","E-GARAGE ilerleyen dönemde bu bilgileri ürün keşif deneyimine dâhil etmeyi amaçlar. Ancak mevcut önizleme alanı tek başına teknik uyumluluk onayı veya profesyonel montaj tavsiyesi sunmaz."]},
+   {heading:"Dijital olarak keşfedin",paragraphs:["Araç stüdyomuzdaki örnek model üzerinde görsel seçenekleri deneyebilir ve kişiselleştirme tercihlerinizi kaydedebilirsiniz. Daha geniş marka, model ve aksesuar desteği platformun geliştirme hedefleri arasındadır."]},
+   {heading:"Güvenli karar verin",paragraphs:["Satın alma veya montaj öncesinde üretici parça numarası, garanti koşulları ve profesyonel servis görüşüyle ürünün aracınıza uygunluğunu doğrulamanızı öneririz."]}
   ]
  },
  "kullanim-sartlari-ve-gizlilik-politikasi":{
@@ -85,7 +122,7 @@ export default async function InformationPage({params}:{params:Promise<{slug:str
  if(!page)notFound();
  return <main className="ks-site ks-info-site">
   <SiteHeader/>
-  <div className="ks-info-breadcrumb"><Link href="/">E-GARAGE</Link><span aria-hidden="true">/</span><span>BİLGİLENDİRME</span></div>
+  <div className="ks-info-breadcrumb"><Link href="/">E-GARAGE</Link><span aria-hidden="true">/</span><span>{["surdurulebilirlik","tasarim","servisler","servis-hizmetleri","modeller","aracinizi-taniyin"].includes(slug)?"E-GARAGE DÜNYASI":"BİLGİLENDİRME"}</span></div>
   <div className="ks-info-layout">
    <aside className="ks-info-sidebar" aria-label="Bilgi sayfaları">
     <span>İÇİNDEKİLER</span>
