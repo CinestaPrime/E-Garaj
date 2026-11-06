@@ -104,7 +104,25 @@ export default function Studio(){
      <Studio3DViewer color={color}/>
      <div className="ks-config-viewer-label">360° <span>ETRAFINDA DÖNDÜR</span></div>
     </div>
-    <div className="ks-config-stage-balance" aria-hidden="true"/>
+    <aside className="ks-config-order" aria-label="Tasarım ve ödeme özeti">
+     <span className="ks-config-order-eyebrow">E-GARAJ / SİPARİŞ ÖZETİ</span>
+     <h2>Hayalindeki<br/>otomobil.</h2>
+     <p className="ks-config-order-lead">Seçimlerinle şekillenen tasarımın.</p>
+     <div className="ks-config-order-summary">
+      <div><span>MARKA / MODEL</span><strong>{brand} {model}</strong></div>
+      <div><span>MODEL YILI</span><strong>{year}</strong></div>
+      <div><span>GÖVDE RENGİ</span><strong><i className="ks-config-order-dot" style={{background:color}}/>{chosen?.name||"Özel renk"}</strong></div>
+      <div><span>JANT SEÇİMİ</span><strong>{wheelOptions[wheel]?.name||"10 KOLLU"} · {wheelOptions[wheel]?.size||"20″"}</strong></div>
+     </div>
+     <div className="ks-config-order-total">
+      <span>TAHMİNİ TOPLAM</span>
+      <strong>Fiyatlandırma yakında</strong>
+      <small>Henüz satış veya ödeme alınmıyor.</small>
+     </div>
+     <button type="button" className="ks-config-order-pay" disabled aria-disabled="true">ÖDEME YAKINDA</button>
+     <button type="button" className="ks-config-order-save" onClick={save}>TASARIMI KAYDET</button>
+     {message&&<p role="status" className="ks-config-order-status">{message}</p>}
+    </aside>
    </div>
   </section>
   <section className="ks-config-customize" aria-label="Araç özelleştirme seçenekleri">
