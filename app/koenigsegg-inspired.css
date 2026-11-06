@@ -489,3 +489,22 @@
  background:#f6f6f6;
  box-shadow:none;
 }
+
+
+/* Homepage hero centered composition — reversible visual experiment. */
+.ks-site .ks-hero{justify-content:center}
+.ks-site .ks-hero-copy{
+ width:100%;
+ max-width:1100px;
+ margin:0 auto;
+ padding:70px 6vw 0;
+ text-align:center;
+}
+.ks-site .ks-hero-copy p{
+ margin:0 auto 30px;
+ max-width:500px;
+}
+@media(max-width:520px){
+ .ks-site .ks-hero-copy{margin:0 auto;padding:65px 20px 0}
+ .ks-site .ks-hero-copy p{margin:0 auto 27px;max-width:360px}
+}
