@@ -1743,3 +1743,20 @@
  border-top:1px solid #e7e9eb;
  color:#777e84;
 }
+
+
+/* Studio footer: retain authentic current e-GARAGE logo and neutral link styling. */
+.ks-site.ks-studio.ks-studio-config .site-footer .footer-logo{
+ filter:none!important;
+ width:150px;
+ max-width:100%;
+}
+.ks-site.ks-studio.ks-studio-config .site-footer .footer-company>a,
+.ks-site.ks-studio.ks-studio-config .site-footer .footer-by a{
+ color:#17191b;
+}
+.ks-site.ks-studio.ks-studio-config .site-footer .footer-links a:hover,
+.ks-site.ks-studio.ks-studio-config .site-footer .footer-company>a:hover,
+.ks-site.ks-studio.ks-studio-config .site-footer .footer-by a:hover{
+ color:#000;
+}
