@@ -1,16 +1,18 @@
 "use client";
 
 import {useEffect,useRef,useState} from "react";
+import type {ReactNode} from "react";
 
 const VIDEO_PATH="/hero-video.mp4.mp4";
 
-export default function HeroVideo(){
+export default function HeroVideo({children}:{children?:ReactNode}){
   const videoRef=useRef<HTMLVideoElement>(null);
   const [source,setSource]=useState("");
   const [percent,setPercent]=useState(0);
   const [ready,setReady]=useState(false);
   const [revealed,setRevealed]=useState(false);
   const [error,setError]=useState(false);
+  const [showCopy,setShowCopy]=useState(false);
 
   useEffect(()=>{
     const controller=new AbortController();
@@ -70,6 +72,12 @@ export default function HeroVideo(){
     return ()=>window.clearTimeout(timer);
   },[ready]);
 
+  useEffect(()=>{
+    if(!revealed)return;
+    const timer=window.setTimeout(()=>setShowCopy(true),14000);
+    return ()=>window.clearTimeout(timer);
+  },[revealed]);
+
   return <>
     <video
       ref={videoRef}
@@ -82,6 +90,7 @@ export default function HeroVideo(){
       onLoadedData={()=>{if(source){setPercent(100);setReady(true)}}}
       onError={()=>{if(source)setError(true)}}
     />
+    {children&&<div className={"ks-hero-copy ks-hero-copy-cinematic"+(showCopy?" is-visible":"")}>{children}</div>}
     {!revealed&&<div className="ks-video-loading" role="status" aria-live="off" aria-label={"Video yükleniyor, yüzde "+percent}>
       <div className="ks-video-loading-inner">
         <img src="/e-garage-metallic-header.svg" alt="e-GARAGE" className="ks-video-loading-logo"/>
