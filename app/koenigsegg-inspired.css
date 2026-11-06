@@ -1688,3 +1688,58 @@
  .ks-site.ks-studio.ks-studio-config .ks-config-tabs{margin-bottom:15px}
  .ks-site.ks-studio.ks-studio-config .ks-config-color-sample{height:55px}
 }
+
+
+/* Studio-only final polish: subtle selected paint, transparent header, white footer. */
+.ks-site.ks-studio.ks-studio-config .ks-config-color-choice.selected .ks-config-color-sample{
+ outline:1px solid rgba(65,75,87,.26);
+ outline-offset:3px;
+ box-shadow:0 0 0 4px rgba(59,72,88,.065),0 6px 16px rgba(28,37,49,.19),inset 0 1px 0 rgba(255,255,255,.42);
+}
+.ks-site.ks-studio.ks-studio-config .ks-nav.ks-nav-minimal{
+ background:transparent!important;
+ background-color:transparent!important;
+ border:0!important;
+ border-bottom:0!important;
+ box-shadow:none!important;
+ backdrop-filter:none!important;
+ -webkit-backdrop-filter:none!important;
+}
+.ks-site.ks-studio.ks-studio-config .ks-nav.ks-nav-minimal::before,
+.ks-site.ks-studio.ks-studio-config .ks-nav.ks-nav-minimal::after{
+ display:none!important;
+ content:none!important;
+}
+.ks-site.ks-studio.ks-studio-config .site-footer{
+ background:#fff;
+ color:#25292e;
+ border-top:1px solid #e8e9eb;
+}
+.ks-site.ks-studio.ks-studio-config .site-footer .footer-logo{
+ filter:brightness(.13);
+}
+.ks-site.ks-studio.ks-studio-config .site-footer .footer-brand p,
+.ks-site.ks-studio.ks-studio-config .site-footer .footer-company p{
+ color:#626970;
+}
+.ks-site.ks-studio.ks-studio-config .site-footer .footer-by,
+.ks-site.ks-studio.ks-studio-config .site-footer .footer-links a{
+ color:#626970;
+}
+.ks-site.ks-studio.ks-studio-config .site-footer .footer-links h3,
+.ks-site.ks-studio.ks-studio-config .site-footer .footer-company h3{
+ color:#343b42;
+}
+.ks-site.ks-studio.ks-studio-config .site-footer .footer-company>a,
+.ks-site.ks-studio.ks-studio-config .site-footer .footer-by a{
+ color:#2a5da8;
+}
+.ks-site.ks-studio.ks-studio-config .site-footer .footer-links a:hover,
+.ks-site.ks-studio.ks-studio-config .site-footer .footer-company>a:hover,
+.ks-site.ks-studio.ks-studio-config .site-footer .footer-by a:hover{
+ color:#164a94;
+}
+.ks-site.ks-studio.ks-studio-config .site-footer .footer-bottom{
+ border-top:1px solid #e7e9eb;
+ color:#777e84;
+}
