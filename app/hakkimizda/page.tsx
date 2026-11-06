@@ -26,7 +26,7 @@ export default function AboutPage(){
    <div className="ks-about-new-story-intro">
     <span className="ks-about-new-smallline">E-GARAJ NEDİR, NEDEN KURULDU?</span>
     <h2>OTOMOBİL TUTKUSUNU<br/><em>TEKNOLOJİYLE BULUŞTURUYORUZ</em></h2>
-    <p>E-Garaj (E-Garage), otomobil sahiplerinin araçlarını keşfetme, kişiselleştirme ve araçlarına uygun ürünlere ulaşma biçimini yeniden düşünmek için geliştirdiğimiz bir dijital otomotiv platformudur.</p>
+    <p>E-GARAGE (E-GARAJ), otomobil sahiplerinin araçlarını keşfetme, kişiselleştirme ve araçlarına uygun ürünlere ulaşma biçimini yeniden düşünmek için geliştirdiğimiz bir dijital otomotiv platformudur.</p>
    </div>
    <div className="ks-about-new-story-columns">
     <div className="ks-about-new-story-body">
