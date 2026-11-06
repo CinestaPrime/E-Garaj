@@ -13,19 +13,16 @@ export default function BrandFooter({studio=false}:{studio?:boolean}) {
           <h3>PLATFORM</h3>
           <Link href="/">Ana Sayfa</Link>
           <Link href="/hakkimizda">Hakkımızda</Link>
-        </nav>
-        <nav className="footer-links" aria-label="E-Garage Dünyası">
-          <h3>E-GARAGE DÜNYASI</h3>
-          <Link href="/bilgi/genel-bakis">Genel Bakış</Link>
-          <Link href="/bilgi/teknoloji">Teknoloji</Link>
-        </nav>
-        <nav className="footer-links footer-legal" aria-label="Bilgilendirme ve politikalar">
-          <h3>BİLGİLENDİRME</h3>
           <Link href="/bilgi/kullanim-sartlari-ve-gizlilik-politikasi">Kullanım Şartları ve Gizlilik Politikası</Link>
           <Link href="/bilgi/cerez-politikasi">Çerez Politikası</Link>
           <Link href="/bilgi/gizlilik-bildirimi-hizmeti">Gizlilik Bildirimi Hizmeti</Link>
           <Link href="/bilgi/cerez-ayarlari">Çerez Ayarları</Link>
           <Link href="/bilgi/iletisim-bilgileri">İletişim Bilgileri</Link>
+        </nav>
+        <nav className="footer-links" aria-label="E-Garage Dünyası">
+          <h3>E-GARAGE DÜNYASI</h3>
+          <Link href="/bilgi/genel-bakis">Genel Bakış</Link>
+          <Link href="/bilgi/teknoloji">Teknoloji</Link>
         </nav>
       </div>
       <div className="footer-bottom">
