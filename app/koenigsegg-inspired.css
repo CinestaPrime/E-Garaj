@@ -1769,7 +1769,7 @@
  display:flex;align-items:flex-end;overflow:hidden;background:#291e21;
 }
 .ks-site.ks-about-reimagined .ks-about-new-hero-photo{
- position:absolute;inset:0;background:#332327 url('/about-hero.jpg') 50% 49% /cover no-repeat;
+ position:absolute;inset:0;background:#332327 url('/about-hero.png') 50% 49% /cover no-repeat;
  transform:scale(1.015);
 }
 .ks-site.ks-about-reimagined .ks-about-new-hero-shade{
@@ -1912,10 +1912,10 @@
  .ks-site.ks-about-reimagined .ks-about-new-cta h2{font-size:clamp(70px,14vw,105px)}
 }
 
-/* High-resolution About hero upload: place about-hero.jpg in /public.
+/* High-resolution About hero upload: place about-hero.png in /public.
    The original image remains available underneath until the upload. */
 .ks-site.ks-about-reimagined .ks-about-new-hero-photo{
- background-image:url('/about-hero.jpg'),url('/about-sunset-photo.svg');
+ background-image:url('/about-hero.png'),url('/about-sunset-photo.svg');
  background-position:50% 49%,50% 49%;
  background-size:cover,cover;
  background-repeat:no-repeat,no-repeat;
