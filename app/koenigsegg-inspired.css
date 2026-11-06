@@ -2251,3 +2251,21 @@
  .ks-site.ks-about-reimagined .ks-about-new-values h3{font-size:29px}
  .ks-site.ks-about-reimagined .ks-about-new-company{padding:83px 6vw 90px}
 }
+
+
+/* About: quiet, professional introductory heading. */
+.ks-site.ks-about-reimagined .ks-about-new-story-intro h2{
+ font:600 clamp(29px,3.55vw,49px)/1.23 'DM Sans',Arial,sans-serif;
+ letter-spacing:-.04em;
+ color:#24282c;
+ max-width:850px;
+ margin:0 auto 27px;
+ text-wrap:balance;
+}
+@media(max-width:640px){
+ .ks-site.ks-about-reimagined .ks-about-new-story-intro h2{
+  font-size:clamp(26px,7vw,35px);
+  line-height:1.25;
+  letter-spacing:-.035em;
+ }
+}
