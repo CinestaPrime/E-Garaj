@@ -1,1 +1,140 @@
-"use client";import SiteHeader from "../SiteHeader";import BrandFooter from "../BrandFooter";import Studio3DViewer from "../Studio3DViewer";import {useState} from "react";const models=["A1","A3","A4","A5","A6","A7","A8","TT","R8","Q3","Q5","Q7","Q8","e-tron GT","S3","S4","S5","S6","S7","S8","RS3","RS4","RS5","RS6","RS7","RS Q8"];const colors=[["Metalik Siyah","#232629"],["Grafit","#666b70"],["Beyaz","#e5e1d9"],["Bakır","#b7834b"],["Gece Mavisi","#354759"],["Bordo","#6a3037"]];export default function Studio(){const[model,setModel]=useState("e-tron GT"),[year,setYear]=useState(2024),[color,setColor]=useState("#e5e1d9"),[wheel,setWheel]=useState(1),[message,setMessage]=useState("");function save(){localStorage.setItem("egaraj-design-v1",JSON.stringify({model,year,color,wheel}));setMessage("Tasarım bu tarayıcıya kaydedildi.")}function load(){try{const x=JSON.parse(localStorage.getItem("egaraj-design-v1")||"null");if(!x)throw Error();setModel(x.model);setYear(x.year);setColor(x.color);setWheel(x.wheel);setMessage("Kayıtlı tasarım yüklendi.")}catch{setMessage("Kayıt bulunamadı.")}}return <main className="ks-site ks-studio"><SiteHeader active="studio"/><div className="studio-head"><div className="studio-index">STUDIO / 001 <span>PERSONAL CONFIGURATION</span></div><small className="kicker">E-GARAJ / STÜDYO</small><h1>ARAÇ <em>TASARIMI.</em></h1><p>Modelini seç, detaylarını belirle ve tasarımını kaydet.</p></div><div className="studio-layout"><aside className="panel"><div className="panel-heading">01 / ARACINI SEÇ <b>↘</b></div><label>MARKA<select disabled><option>Audi</option></select></label><label>MODEL<select value={model} onChange={e=>setModel(e.target.value)}>{models.map(m=><option key={m}>{m}</option>)}</select></label><label>MODEL YILI<select value={year} onChange={e=>setYear(Number(e.target.value))}>{Array.from({length:27},(_,i)=>2026-i).map(y=><option key={y}>{y}</option>)}</select></label><div className="panel-heading second">02 / ÖZELLEŞTİR <b>↘</b></div><div className="field-title">GÖVDE RENGİ</div><div className="swatches">{colors.map(([name,c])=><button key={c} className={color===c?"selected":""} style={{background:c}} aria-label={name} title={name} onClick={()=>setColor(c)}/>)}</div><div className="field-title">JANT TASARIMI</div><div className="wheels">{[0,1].map(n=><button key={n} className={wheel===n?"selected":""} onClick={()=>setWheel(n)}><span>{n?"✺":"✧"}</span>{n?"10 KOLLU":"5 KOLLU"}</button>)}</div><div className="panel-actions"><button className="gold-btn" onClick={save}>TASARIMI KAYDET ↗</button><button className="ghost-btn" onClick={load}>KAYITLI TASARIMI AÇ</button>{message&&<p role="status">{message}</p>}</div></aside><section className="showroom"><div className="showroom-top"><span>DİJİTAL SHOWROOM</span><span>● KONSEPT GÖRÜNÜM</span></div><div className="showroom-title"><h2>AUDI <em>E-TRON GT RS</em></h2></div><div className="showroom-image showroom-image-360"><Studio3DViewer color={color}/></div><div className="showroom-features"><div><small>01</small><b>GÖVDE</b><span>BOYA SEÇİMİ</span></div><div><small>02</small><b>JANT</b><span>KONSEPT SEÇİM</span></div><div><small>03</small><b>İÇ MEKÂN</b><span>YAKINDA</span></div></div></section><aside className="panel market"><div className="panel-heading">03 / UYUMLU ÜRÜNLER <b>↗</b></div><h3>ARACINA ÖZEL.<br/><em>SENİN TARZIN.</em></h3><p>Satıcı ürünleri ve doğrulanmış uyumluluk entegrasyonu hazırlanıyor.</p>{[["✺","PERFORMANS JANTLARI"],["◈","GÖVDE KİTLERİ"],["▦","İÇ AKSESUARLAR"]].map(x=><div className="market-item" key={x[1]}><div>{x[0]}</div><span><b>{x[1]}</b><small>YAKINDA</small></span></div>)}<p className="disclaimer">Henüz gerçek satış ve sipariş işlemleri bulunmamaktadır.</p></aside></div><div className="studio-bottom"><span>AUDI {model} / {year}</span><button onClick={save}>GARAJIMA KAYDET ↗</button></div><p className="disclaimer bottom-note">360° Audi modelinin rengi sol taraftaki renk paletinden değiştirilebilir. STL modeli tek malzemeli olduğundan renk şimdilik aracın tamamına uygulanır; model, yıl ve jant seçimleri 3D görünümü değiştirmez. Bu mağazadaki hizmetlerin markalarla resmî bağlantısı bulunmamaktadır.</p><BrandFooter/></main>}
+"use client";
+
+import SiteHeader from "../SiteHeader";
+import BrandFooter from "../BrandFooter";
+import Studio3DViewer from "../Studio3DViewer";
+import {useState} from "react";
+
+const models=["A1","A3","A4","A5","A6","A7","A8","TT","R8","Q3","Q5","Q7","Q8","e-tron GT","S3","S4","S5","S6","S7","S8","RS3","RS4","RS5","RS6","RS7","RS Q8"];
+const colors=[
+ {name:"Buz Gümüşü",hex:"#c0c4c7",type:"METALİK"},
+ {name:"Zeytin Yeşili",hex:"#88815a",type:"METALİK"},
+ {name:"Gece Mavisi",hex:"#526779",type:"METALİK"},
+ {name:"Metalik Siyah",hex:"#232629",type:"METALİK"},
+ {name:"Grafit",hex:"#666b70",type:"METALİK"},
+ {name:"Tango Kırmızı",hex:"#a62d37",type:"METALİK"},
+ {name:"Daytona Gri",hex:"#5d5e61",type:"SEDEF"},
+ {name:"Beyaz",hex:"#e5e1d9",type:"DÜZ"},
+ {name:"Bakır",hex:"#b7834b",type:"METALİK"},
+ {name:"Bordo",hex:"#6a3037",type:"METALİK"}
+];
+const wheelOptions=[
+ {name:"5 KOLLU",size:"20″",spokes:5},
+ {name:"10 KOLLU",size:"20″",spokes:10},
+ {name:"SPORT",size:"21″",spokes:7},
+ {name:"DİNAMİK",size:"21″",spokes:12}
+];
+const tabs=[
+ {id:"motor",label:"Motor"},
+ {id:"paketler",label:"Paketler"},
+ {id:"dis",label:"Dış Tasarım"},
+ {id:"ic",label:"İç Tasarım"},
+ {id:"donanim",label:"Donanım"},
+ {id:"aksesuar",label:"Aksesuarlar"}
+] as const;
+type TabId=typeof tabs[number]["id"];
+
+function WheelGraphic({spokes}:{spokes:number}){
+ return <svg className="ks-config-wheel-art" viewBox="0 0 100 100" aria-hidden="true">
+  <circle cx="50" cy="50" r="45" fill="#282b30" stroke="#16181b" strokeWidth="4"/>
+  <circle cx="50" cy="50" r="38" fill="#b8bcbf" stroke="#6a7075" strokeWidth="3"/>
+  <circle cx="50" cy="50" r="32" fill="#202328"/>
+  {Array.from({length:spokes},(_,i)=><path key={i} d="M 47 47 L 44 18 L 56 18 L 53 47 Z" transform={`rotate(${i*360/spokes} 50 50)`} fill="#c9cbcd" stroke="#73777b" strokeWidth="1.1"/>)}
+  <circle cx="50" cy="50" r="11" fill="#92979c" stroke="#292b2d" strokeWidth="3"/>
+  <circle cx="50" cy="50" r="4" fill="#34373a"/>
+ </svg>;
+}
+
+export default function Studio(){
+ const [model,setModel]=useState("e-tron GT");
+ const [year,setYear]=useState(2024);
+ const [color,setColor]=useState("#e5e1d9");
+ const [wheel,setWheel]=useState(1);
+ const [tab,setTab]=useState<TabId>("dis");
+ const [message,setMessage]=useState("");
+ const [brand]=useState("Audi");
+ function save(){
+  localStorage.setItem("egaraj-design-v1",JSON.stringify({model,year,color,wheel,brand}));
+  setMessage("Seçimlerin bu tarayıcıya kaydedildi.");
+ }
+ function load(){
+  try{
+   const x=JSON.parse(localStorage.getItem("egaraj-design-v1")||"null");
+   if(!x)throw Error("not found");
+   if(typeof x.model==="string")setModel(x.model);
+   if(typeof x.year==="number")setYear(x.year);
+   if(typeof x.color==="string")setColor(x.color);
+   if(typeof x.wheel==="number")setWheel(x.wheel);
+   setTab("dis");
+   setMessage("Kayıtlı seçimlerin yüklendi.");
+  }catch{
+   setMessage("Henüz kayıtlı tasarım bulunamadı.");
+  }
+ }
+ const chosen=colors.find(item=>item.hex.toLowerCase()===color.toLowerCase());
+ return <main className="ks-site ks-studio ks-studio-config">
+  <SiteHeader active="studio"/>
+  <section className="ks-config-top" aria-label="Araç yapılandırma stüdyosu">
+   <header className="ks-config-intro">
+    <span className="ks-config-eyebrow">E-GARAJ / DİJİTAL ARAÇ STÜDYOSU</span>
+    <h1>e-tron GT</h1>
+    <p>360° DİJİTAL ÖNİZLEME <span aria-hidden="true">·</span> AUDI E-TRON GT RS</p>
+   </header>
+   <div className="ks-config-stage">
+    <aside className="ks-config-selection" aria-label="Araç bilgileri">
+     <span className="ks-config-card-caption">ARACINI OLUŞTUR</span>
+     <h2>Senin garajın.</h2>
+     <p className="ks-config-card-subtitle">Markanı, modelini ve üretim yılını seç.</p>
+     <label htmlFor="ks-car-brand">MARKA</label>
+     <select id="ks-car-brand" value={brand} disabled><option>Audi</option></select>
+     <label htmlFor="ks-car-model">MODEL</label>
+     <select id="ks-car-model" value={model} onChange={e=>setModel(e.target.value)}>
+      {models.map(item=><option key={item}>{item}</option>)}
+     </select>
+     <label htmlFor="ks-car-year">MODEL YILI</label>
+     <select id="ks-car-year" value={year} onChange={e=>setYear(Number(e.target.value))}>
+      {Array.from({length:27},(_,i)=>2026-i).map(item=><option key={item}>{item}</option>)}
+     </select>
+     <span className="ks-config-selection-note">Görüntülenen 3D otomobil sabit Audi e-tron GT RS modelidir.</span>
+     <button type="button" className="ks-config-save" onClick={save}>TASARIMI KAYDET</button>
+     <button type="button" className="ks-config-load" onClick={load}>KAYITLI TASARIMI AÇ</button>
+     {message&&<p role="status" className="ks-config-status">{message}</p>}
+    </aside>
+    <div className="ks-config-vehicle">
+     <Studio3DViewer color={color}/>
+     <div className="ks-config-viewer-label">360° <span>ETRAFINDA DÖNDÜR</span></div>
+    </div>
+    <div className="ks-config-stage-balance" aria-hidden="true"/>
+   </div>
+  </section>
+  <section className="ks-config-customize" aria-label="Araç özelleştirme seçenekleri">
+   <nav className="ks-config-tabs" aria-label="Özelleştirme kategorileri">
+    {tabs.map(item=><button key={item.id} type="button" className={tab===item.id?"active":""} aria-current={tab===item.id?"page":undefined} onClick={()=>setTab(item.id)}>{item.label}</button>)}
+   </nav>
+   {tab==="dis"?<div className="ks-config-options">
+    <div className="ks-config-paint">
+     <div className="ks-config-options-heading"><div><h2>Dış renk</h2><span>Metalik · Sedef · Düz renk seçenekleri</span></div><strong>{chosen?.name||"Özel renk"}</strong></div>
+     <div className="ks-config-color-list">
+      {colors.map(item=><button key={item.hex} type="button" className={"ks-config-color-choice"+(color===item.hex?" selected":"")} onClick={()=>{setColor(item.hex);setMessage("")}} aria-label={item.name} aria-pressed={color===item.hex}>
+       <span className="ks-config-color-sample" style={{background:`linear-gradient(158deg,rgba(255,255,255,.42),transparent 45%,rgba(0,0,0,.3)),${item.hex}`}}/>
+       <span className="ks-config-color-name">{item.name}</span>
+      </button>)}
+     </div>
+    </div>
+    <div className="ks-config-wheels">
+     <div className="ks-config-options-heading"><div><h2>Jantlar</h2><span>20″ ve 21″ tasarım seçenekleri</span></div></div>
+     <div className="ks-config-wheel-list">
+      {wheelOptions.map((item,index)=><button type="button" key={item.name} className={"ks-config-wheel-choice"+(wheel===index?" selected":"")} onClick={()=>setWheel(index)} aria-label={item.name+" "+item.size} aria-pressed={wheel===index}>
+       <WheelGraphic spokes={item.spokes}/>
+       <span>{item.name}</span>
+       <small>{item.size}</small>
+      </button>)}
+     </div>
+     <p className="ks-config-wheel-note">Jant seçimi kaydedilir; 3D modele uygulanması sonraki aşamada.</p>
+    </div>
+   </div>:<div className="ks-config-coming-soon"><h2>{tabs.find(item=>item.id===tab)?.label}</h2><p>Bu kategori için özelleştirme seçenekleri hazırlanıyor. Dış Tasarım sekmesinde gövde rengini değiştirebilir ve jant tercihlerini kaydedebilirsin.</p><button type="button" onClick={()=>setTab("dis")}>DIŞ TASARIMA DÖN</button></div>}
+  </section>
+  <div className="ks-config-footnote">3D modelde boya rengi bütün yüzeye uygulanabilir; model, yıl ve jant tercihleri henüz 3D görünümü değiştirmez. Araç markalarıyla resmî bağlantı bulunmamaktadır.</div>
+  <BrandFooter/>
+ </main>;
+}
