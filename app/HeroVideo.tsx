@@ -74,7 +74,7 @@ export default function HeroVideo({children}:{children?:ReactNode}){
 
   useEffect(()=>{
     if(!revealed)return;
-    const timer=window.setTimeout(()=>setShowCopy(true),8000);
+    const timer=window.setTimeout(()=>setShowCopy(true),4000);
     return ()=>window.clearTimeout(timer);
   },[revealed]);
 
