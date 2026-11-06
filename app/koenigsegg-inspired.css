@@ -1955,3 +1955,130 @@
   font-size:clamp(60px,12.5vw,90px);
  }
 }
+
+
+/* E-Garaj Hakkımızda: founder-led long-form story, scoped to About only. */
+.ks-site.ks-about-reimagined .ks-about-new-story-intro{
+ max-width:1150px;
+ margin:clamp(46px,6vw,88px) auto 0;
+ text-align:center;
+}
+.ks-site.ks-about-reimagined .ks-about-new-story-intro .ks-about-new-smallline{
+ margin-bottom:24px;
+ color:#797775;
+}
+.ks-site.ks-about-reimagined .ks-about-new-story-intro h2{
+ font:800 clamp(51px,6.5vw,103px)/.99 'Barlow Condensed',Impact,sans-serif;
+ letter-spacing:-.018em;
+ margin:0 auto 28px;
+ color:#1b1b1c;
+}
+.ks-site.ks-about-reimagined .ks-about-new-story-intro h2 em{
+ font-style:normal;color:#84827e;
+}
+.ks-site.ks-about-reimagined .ks-about-new-story-intro>p{
+ max-width:850px;margin:0 auto;
+ font:400 clamp(15px,1.45vw,19px)/1.85 'DM Sans',Arial,sans-serif;
+ color:#555658;
+}
+.ks-site.ks-about-reimagined .ks-about-new-story-columns{
+ display:grid;
+ grid-template-columns:minmax(0,1.2fr) minmax(295px,.74fr);
+ gap:clamp(48px,7vw,128px);
+ align-items:start;
+ max-width:1420px;
+ margin:clamp(67px,7vw,110px) auto 0;
+}
+.ks-site.ks-about-reimagined .ks-about-new-story-body{
+ max-width:760px;
+}
+.ks-site.ks-about-reimagined .ks-about-new-story-body h3{
+ margin:0 0 17px;
+ font:800 clamp(28px,3vw,43px)/1.08 'Barlow Condensed',Impact,sans-serif;
+ letter-spacing:.015em;
+ color:#1b1c1e;
+}
+.ks-site.ks-about-reimagined .ks-about-new-story-body h3:not(:first-child){
+ margin-top:47px;
+}
+.ks-site.ks-about-reimagined .ks-about-new-story-body p{
+ font:400 clamp(14px,1.2vw,16px)/1.95 'DM Sans',Arial,sans-serif;
+ color:#4e5052;
+ margin:0 0 22px;
+}
+.ks-site.ks-about-reimagined .ks-about-new-founder{
+ background:#dedbd5;
+ color:#1c1d1f;
+ padding:clamp(28px,3.5vw,51px);
+ border-top:2px solid #222426;
+}
+.ks-site.ks-about-reimagined .ks-about-new-founder-kicker{
+ display:block;
+ font:700 10px/1.5 'DM Sans',Arial,sans-serif;
+ letter-spacing:.2em;
+ color:#686b6e;
+}
+.ks-site.ks-about-reimagined .ks-about-new-founder h3{
+ font:800 clamp(57px,6vw,91px)/.9 'Barlow Condensed',Impact,sans-serif;
+ letter-spacing:-.015em;
+ margin:23px 0 13px;
+}
+.ks-site.ks-about-reimagined .ks-about-new-founder-role{
+ font:700 10px/1.7 'DM Sans',Arial,sans-serif;
+ letter-spacing:.12em;
+ color:#626467;
+}
+.ks-site.ks-about-reimagined .ks-about-new-founder-rule{
+ height:1px;
+ background:#b4b3af;
+ margin:29px 0 26px;
+}
+.ks-site.ks-about-reimagined .ks-about-new-founder p{
+ font:400 clamp(13px,1.15vw,15px)/1.9 'DM Sans',Arial,sans-serif;
+ color:#484b4d;
+ margin:0 0 19px;
+}
+.ks-site.ks-about-reimagined .ks-about-new-founder-mark{
+ display:block;
+ border-top:1px solid #b4b3af;
+ padding-top:21px;
+ margin-top:30px;
+ font:700 10px/1.5 'DM Sans',Arial,sans-serif;
+ letter-spacing:.16em;
+ color:#292b2e;
+}
+.ks-site.ks-about-reimagined .ks-about-new-founder-mark span{
+ color:#94918d;padding:0 7px;
+}
+@media(max-width:950px){
+ .ks-site.ks-about-reimagined .ks-about-new-story-columns{
+  grid-template-columns:1fr;
+  gap:35px;
+ }
+ .ks-site.ks-about-reimagined .ks-about-new-story-body{
+  max-width:none;
+ }
+ .ks-site.ks-about-reimagined .ks-about-new-founder{
+  max-width:700px;
+  width:100%;
+ }
+}
+@media(max-width:640px){
+ .ks-site.ks-about-reimagined .ks-about-new-story-intro{
+  margin-top:49px;
+ }
+ .ks-site.ks-about-reimagined .ks-about-new-story-intro h2{
+  font-size:clamp(43px,10.2vw,66px);
+  overflow-wrap:break-word;
+  margin-bottom:20px;
+ }
+ .ks-site.ks-about-reimagined .ks-about-new-story-intro>p{
+  font-size:14px;
+ }
+ .ks-site.ks-about-reimagined .ks-about-new-story-columns{
+  margin-top:55px;
+ }
+ .ks-site.ks-about-reimagined .ks-about-new-founder{
+  padding:27px 23px;
+ }
+}
