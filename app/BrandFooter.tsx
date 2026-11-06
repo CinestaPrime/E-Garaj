@@ -6,8 +6,8 @@ export default function BrandFooter({studio=false}:{studio?:boolean}) {
       <div className="footer-inner">
         <div className="footer-brand">
           <Link href="/" aria-label="E-GARAGE ana sayfa"><img src={studio?"/e-garage-metallic-header.svg":"/e-garaj-logo.svg"} alt="e-GARAGE" className="footer-logo" /></Link>
-          <p>Otomobil tutkusunu dijital tasarım ve ürün keşfiyle buluşturuyoruz.</p>
-          <span className="footer-by">Bir <a href="https://cinestaai.com" target="_blank" rel="noopener noreferrer">CinestaAI</a> girişimidir.</span>
+          <p>E-GARAGE, otomobil tutkusunu dijital tasarım ve kişiselleştirme deneyimiyle buluşturan yeni nesil bir otomotiv platformudur. Araç sahiplerinin kendi tarzlarını keşfetmelerini sağlarken, aksesuar ve yedek parça sektöründeki ürünlerle kullanıcıları aynı dijital ekosistemde buluşturmayı hedefliyoruz.</p>
+          <span className="footer-by"><a href="https://cinestaai.com" target="_blank" rel="noopener noreferrer">CinestaAI</a> bünyesinde geliştirilen bir otomotiv teknolojisi girişimidir.</span>
         </div>
         <nav className="footer-links" aria-label="Platform">
           <h3>PLATFORM</h3>
