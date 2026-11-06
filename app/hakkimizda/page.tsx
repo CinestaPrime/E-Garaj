@@ -38,13 +38,12 @@ export default function AboutPage(){
      <p>Bu yaklaşımla otomotiv satış ve keşif sürecini daha görsel, daha kişisel ve daha anlaşılır hale getirmeyi; Türkiye'den başlayarak zamanla daha geniş pazarlara açılan bir otomotiv teknoloji platformu geliştirmeyi hedefliyoruz.</p>
     </div>
     <aside className="ks-about-new-founder">
-     <span className="ks-about-new-founder-kicker">KURUCUSUNDAN</span>
-     <h3>EMİN RIZA<br/>PİŞKİN</h3>
-     <span className="ks-about-new-founder-role">E-GARAJ KURUCUSU · CINESTAAI KURUCUSU</span>
+     <h3>EMİN<br/>PİŞKİN</h3>
+     <span className="ks-about-new-founder-role">KURUCU</span>
      <div className="ks-about-new-founder-rule"/>
-     <p>E-Garaj, benim geliştirdiğim bir ürün ve CinestaAI bünyesinde tarafımızdan tasarlanan bir dijital otomotiv girişimidir. CinestaAI'ın kurucusu olarak teknoloji, yazılım ve kullanıcı deneyimini otomobil tutkusuyla buluşturmayı hedefliyorum.</p>
+     <p>E-Garage, CinestaAI bünyesinde tarafımızdan tasarlanan bir dijital otomotiv girişimidir. CinestaAI'ın kurucusu olarak teknoloji, yazılım ve kullanıcı deneyimini otomobil tutkusuyla buluşturmayı hedefliyorum.</p>
      <p>Vizyonumuz; otomotiv aksesuar ve yedek parça sektöründe alıcılarla satıcıları daha güçlü biçimde bir araya getirmek, insanların seçtikleri ürünleri kendi araç marka ve modelleri üzerinde görerek daha bilinçli tercihler yapabilecekleri bir deneyim sunmak. Otomobil dünyasının dijital geleceğine bu anlayışla yön vermek istiyoruz.</p>
-     <span className="ks-about-new-founder-mark">E-GARAGE <span>×</span> CINESTAAI</span>
+     <span className="ks-about-new-founder-mark">E-GARAGE</span>
     </aside>
    </div>
   </section>
