@@ -13,7 +13,7 @@ export default function AboutPage(){
   <section className="ks-about-new-hero" aria-label="E-Garaj hakkımızda">
    <div className="ks-about-new-hero-photo" role="img" aria-label="Gün batımında manzaraya karşı duran spor otomobil"/>
    <div className="ks-about-new-hero-shade"/>
-   <div className="ks-about-new-hero-top"><span>HAKKIMIZDA</span><span>OTOMOBİLİN GELECEĞİNE BİR BAKIŞ</span></div>
+   <div className="ks-about-new-hero-top"><span>OTOMOBİLİN GELECEĞİNE BİR BAKIŞ</span></div>
    <div className="ks-about-new-hero-content">
     <span className="ks-about-new-eyebrow">E-GARAGE / BİZ KİMİZ</span>
     <h1>TUTKUNUN<br/><em>ÖTESİNDE.</em></h1>
@@ -24,19 +24,18 @@ export default function AboutPage(){
   <section className="ks-about-new-manifesto">
    <div className="ks-about-new-meta"><span>01 / HİKÂYEMİZ</span><span>DİJİTAL OTOMOTİV DENEYİMİ</span></div>
    <div className="ks-about-new-manifesto-grid">
-    <h2>BİR ARAÇTAN<br/><span>ÇOK DAHA</span><br/>FAZLASI.</h2>
+    <h2>BİR ARAÇTAN<br/><span>ÇOK DAHA</span><br/>FAZLASI</h2>
     <div className="ks-about-new-copy">
      <span className="ks-about-new-smallline">BİZİ HAREKETE GEÇİREN ŞEY</span>
      <p>Otomobil, bizim için yalnızca bir ulaşım aracı değil; kişiliğin, zevkin ve özgürlüğün bir ifadesi. E-Garaj bu düşünceden doğdu: otomobil tutkusunu herkesin keşfedebileceği, kişiselleştirebileceği ve kendi tarzına dönüştürebileceği dijital bir deneyime taşımak.</p>
      <p>Bugün araç stüdyomuzda modelleri keşfetmeyi, gövde renklerini denemeyi ve tercihlerini kişisel garajında saklamayı mümkün kılan bir temel oluşturuyoruz. Yarın ise uyumlu ürünleri, daha fazla markayı ve otomotiv dünyasının farklı paydaşlarını aynı platformda buluşturmayı hedefliyoruz.</p>
-     <Link href="/studio" className="ks-about-new-inline-link">ARAÇ STÜDYOSUNU KEŞFET <span>↗</span></Link>
     </div>
    </div>
   </section>
   <section className="ks-about-new-quote" aria-label="E-Garaj yaklaşımı">
    <div className="ks-about-new-quote-inner">
     <span>YENİ NESİL GARAJ</span>
-    <h2>HAYAL ET.<br/>KEŞFET.<br/><em>KENDİN TASARLA.</em></h2>
+    <h2>HAYAL ET<br/>KEŞFET<br/><em>KENDİN TASARLA</em></h2>
     <p>Detayların karaktere dönüştüğü bir otomobil deneyimi.</p>
    </div>
   </section>
