@@ -41,7 +41,7 @@ export default function AboutPage(){
      <h3>EMİN<br/>PİŞKİN</h3>
      <span className="ks-about-new-founder-role">KURUCU</span>
      <div className="ks-about-new-founder-rule"/>
-     <p>E-Garage, CinestaAI bünyesinde tarafımızdan tasarlanan bir dijital otomotiv girişimidir. CinestaAI'ın kurucusu olarak teknoloji, yazılım ve kullanıcı deneyimini otomobil tutkusuyla buluşturmayı hedefliyorum.</p>
+     <p>E-GARAGE, CinestaAI bünyesinde geliştirdiğimiz, otomotiv sektörünü dijital teknolojilerle buluşturmayı amaçlayan bir girişimdir. Yazılım, tasarım ve kullanıcı deneyimi alanlarındaki yaklaşımımızı otomobil tutkusuyla birleştirerek araç kişiselleştirmeyi daha erişilebilir, yenilikçi ve etkileşimli bir deneyime dönüştürmeyi hedefliyoruz.</p>
      <p>Vizyonumuz; otomotiv aksesuar ve yedek parça sektöründe alıcılarla satıcıları daha güçlü biçimde bir araya getirmek, insanların seçtikleri ürünleri kendi araç marka ve modelleri üzerinde görerek daha bilinçli tercihler yapabilecekleri bir deneyim sunmak. Otomobil dünyasının dijital geleceğine bu anlayışla yön vermek istiyoruz.</p>
      <span className="ks-about-new-founder-mark">E-GARAGE</span>
     </aside>
