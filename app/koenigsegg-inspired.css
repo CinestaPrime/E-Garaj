@@ -2505,3 +2505,36 @@
  .ks-site .site-footer .footer-brand{grid-column:auto}
  .ks-site .site-footer .footer-links[aria-label="E-Garage Dünyası"]{grid-column:auto}
 }
+
+
+/* Information pages only: white header, black branding, breadcrumb below navigation. */
+.ks-site.ks-info-site .ks-nav.ks-nav-minimal{
+ position:relative;
+ inset:auto;
+ top:auto;
+ left:auto;
+ right:auto;
+ width:100%;
+ background:#f7f7f5;
+ background-color:#f7f7f5;
+ border:0;
+ border-bottom:1px solid #e8e8e5;
+ box-shadow:none;
+}
+.ks-site.ks-info-site .ks-nav.ks-nav-minimal .ks-brand img{
+ filter:brightness(.08);
+}
+.ks-site.ks-info-site .ks-nav.ks-nav-minimal .ks-menu-trigger{
+ color:#191b1f;
+ text-shadow:none;
+}
+.ks-site.ks-info-site .ks-nav.ks-nav-minimal .ks-menu-bars i{
+ background:#191b1f;
+ box-shadow:none;
+}
+.ks-site.ks-info-site .ks-info-breadcrumb{
+ padding-top:38px;
+}
+@media(max-width:520px){
+ .ks-site.ks-info-site .ks-info-breadcrumb{padding-top:31px}
+}
