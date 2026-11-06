@@ -1760,3 +1760,154 @@
 .ks-site.ks-studio.ks-studio-config .site-footer .footer-by a:hover{
  color:#000;
 }
+
+
+/* About 2026 redesign. Scoped so the Home and Studio pages are unchanged. */
+.ks-site.ks-about-reimagined{background:#0a0b0d;color:#f7f5f2}
+.ks-site.ks-about-reimagined .ks-about-new-hero{
+ height:min(94svh,940px);min-height:610px;position:relative;
+ display:flex;align-items:flex-end;overflow:hidden;background:#291e21;
+}
+.ks-site.ks-about-reimagined .ks-about-new-hero-photo{
+ position:absolute;inset:0;background:#332327 url('/about-sunset-photo.svg') 50% 49% /cover no-repeat;
+ transform:scale(1.015);
+}
+.ks-site.ks-about-reimagined .ks-about-new-hero-shade{
+ position:absolute;inset:0;pointer-events:none;
+ background:linear-gradient(90deg,rgba(4,6,10,.73) 0%,rgba(7,7,9,.42) 40%,rgba(7,7,9,.04) 78%),
+ linear-gradient(0deg,rgba(6,7,10,.81),transparent 41%,transparent 74%,rgba(7,7,9,.22));
+}
+.ks-site.ks-about-reimagined .ks-about-new-hero-top{
+ position:absolute;top:108px;left:7vw;right:7vw;display:flex;justify-content:space-between;
+ gap:20px;z-index:2;color:#e6e2de;font-size:9px;font-weight:700;letter-spacing:.2em;
+}
+.ks-site.ks-about-reimagined .ks-about-new-hero-content{position:relative;z-index:2;padding:0 7vw 115px;max-width:1080px}
+.ks-site.ks-about-reimagined .ks-about-new-eyebrow{
+ color:#c9c6c2;font-size:10px;font-weight:700;letter-spacing:.22em;display:block;
+}
+.ks-site.ks-about-reimagined .ks-about-new-hero-content h1{
+ font:800 clamp(83px,11.6vw,178px)/.85 'Barlow Condensed',Impact,sans-serif;
+ letter-spacing:-.023em;margin:22px 0 27px;text-shadow:0 4px 32px #0005;
+}
+.ks-site.ks-about-reimagined .ks-about-new-hero-content h1 em{font-style:normal;color:#dfd9d3}
+.ks-site.ks-about-reimagined .ks-about-new-hero-content p{font-size:15px;line-height:1.85;color:#f2ece6;max-width:510px;margin:0}
+.ks-site.ks-about-reimagined .ks-about-new-hero-bottom{
+ position:absolute;z-index:2;bottom:28px;left:7vw;right:7vw;
+ display:flex;justify-content:space-between;gap:12px;color:#d4d0cb;font-size:9px;font-weight:700;letter-spacing:.18em;
+}
+.ks-site.ks-about-reimagined .ks-about-new-meta{
+ display:flex;justify-content:space-between;gap:24px;
+ color:#888d90;font:700 10px/1.6 'DM Sans',Arial,sans-serif;letter-spacing:.16em;
+}
+.ks-site.ks-about-reimagined .ks-about-new-manifesto{background:#eeeae3;color:#171719;padding:110px 7vw 126px}
+.ks-site.ks-about-reimagined .ks-about-new-manifesto-grid{
+ margin-top:79px;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(310px,.7fr);
+ gap:7vw;align-items:end;
+}
+.ks-site.ks-about-reimagined .ks-about-new-manifesto h2,
+.ks-site.ks-about-reimagined .ks-about-new-company h2{
+ font:800 clamp(67px,8vw,128px)/.91 'Barlow Condensed',Impact,sans-serif;
+ letter-spacing:-.016em;margin:0;
+}
+.ks-site.ks-about-reimagined .ks-about-new-manifesto h2 span{color:#91908b}
+.ks-site.ks-about-reimagined .ks-about-new-smallline{
+ display:block;margin-bottom:26px;color:#6a6d70;font-size:10px;font-weight:700;letter-spacing:.15em;
+}
+.ks-site.ks-about-reimagined .ks-about-new-copy p{
+ font:400 clamp(14px,1.25vw,16px)/1.95 'DM Sans',Arial,sans-serif;
+ color:#444548;margin:0 0 20px;
+}
+.ks-site.ks-about-reimagined .ks-about-new-inline-link{
+ display:inline-flex;align-items:center;justify-content:space-between;gap:40px;
+ padding:17px 0;margin-top:18px;border-bottom:1px solid #242628;
+ font-weight:700;font-size:11px;letter-spacing:.1em;color:#171719;
+}
+.ks-site.ks-about-reimagined .ks-about-new-inline-link:hover{color:#76716d}
+.ks-site.ks-about-reimagined .ks-about-new-quote{
+ background:radial-gradient(circle at 80% 30%,#272327 0%,#141316 40%,#090a0d 100%);
+ padding:145px 7vw 155px;
+ min-height:560px;display:flex;align-items:center;
+}
+.ks-site.ks-about-reimagined .ks-about-new-quote-inner{width:100%;max-width:1500px;margin:auto}
+.ks-site.ks-about-reimagined .ks-about-new-quote-inner>span{color:#a4a2a1;font-size:10px;letter-spacing:.22em;font-weight:700}
+.ks-site.ks-about-reimagined .ks-about-new-quote h2{
+ margin:29px 0;font:800 clamp(82px,10vw,158px)/.87 'Barlow Condensed',Impact,sans-serif;
+ letter-spacing:-.017em;
+}
+.ks-site.ks-about-reimagined .ks-about-new-quote h2 em{font-style:normal;color:#8d8583}
+.ks-site.ks-about-reimagined .ks-about-new-quote p{font-size:14px;line-height:1.7;color:#a9a8aa;max-width:550px}
+.ks-site.ks-about-reimagined .ks-about-new-values{background:#f6f5f2;color:#18191a;padding:110px 7vw 125px}
+.ks-site.ks-about-reimagined .ks-about-new-values-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:25px;margin-top:75px}
+.ks-site.ks-about-reimagined .ks-about-new-values article{
+ border-top:1px solid #b4b4b1;padding:23px 0 0;min-height:290px;
+ display:flex;flex-direction:column;justify-content:space-between;
+}
+.ks-site.ks-about-reimagined .ks-about-new-number{font-size:11px;font-weight:700;color:#818286;letter-spacing:.08em}
+.ks-site.ks-about-reimagined .ks-about-new-values h3{
+ margin:10px 0 16px;font:800 clamp(42px,4.4vw,74px)/.94 'Barlow Condensed',Impact,sans-serif;
+}
+.ks-site.ks-about-reimagined .ks-about-new-values p{font-size:13px;line-height:1.85;color:#55595c;max-width:360px}
+.ks-site.ks-about-reimagined .ks-about-new-value-icon{color:#8f9499;font-size:18px;align-self:flex-end}
+.ks-site.ks-about-reimagined .ks-about-new-company{
+ background:#e7e3dc;color:#1c1c1d;padding:120px 7vw 135px;
+ display:grid;grid-template-columns:minmax(0,1.1fr) minmax(280px,.65fr);gap:9vw;align-items:end;
+}
+.ks-site.ks-about-reimagined .ks-about-new-company .ks-about-new-eyebrow{color:#67696a;margin-bottom:27px}
+.ks-site.ks-about-reimagined .ks-about-new-company h2 em{color:#848480;font-style:normal}
+.ks-site.ks-about-reimagined .ks-about-new-company-copy p{
+ font-size:15px;line-height:1.9;color:#4c4c4e;margin:0 0 19px;
+}
+.ks-site.ks-about-reimagined .ks-about-new-company-copy strong{color:#181819}
+.ks-site.ks-about-reimagined .ks-about-new-company-link{
+ display:inline-flex;align-items:center;justify-content:space-between;
+ gap:48px;border:1px solid #212325;padding:19px 23px;min-width:250px;
+ color:#222426;font-size:11px;font-weight:700;letter-spacing:.12em;margin-top:18px;
+ transition:background .2s,color .2s;
+}
+.ks-site.ks-about-reimagined .ks-about-new-company-link:hover{background:#17191b;color:#fff}
+.ks-site.ks-about-reimagined .ks-about-new-cta{
+ background:#101114;padding:125px 7vw 135px;display:flex;flex-direction:column;align-items:flex-start;
+}
+.ks-site.ks-about-reimagined .ks-about-new-cta>span{color:#9da0a3;font-size:10px;font-weight:700;letter-spacing:.2em}
+.ks-site.ks-about-reimagined .ks-about-new-cta h2{
+ margin:24px 0 40px;font:800 clamp(82px,10vw,160px)/.88 'Barlow Condensed',Impact,sans-serif;
+}
+.ks-site.ks-about-reimagined .ks-about-new-cta h2 em{font-style:normal;color:#8d8e8f}
+.ks-site.ks-about-reimagined .ks-about-new-cta a{
+ display:inline-flex;align-items:center;justify-content:space-between;gap:44px;
+ color:#f4f4f4;border:1px solid #c5c5c4;padding:18px 24px;min-width:235px;
+ font-size:11px;font-weight:700;letter-spacing:.13em;transition:background .2s,color .2s;
+}
+.ks-site.ks-about-reimagined .ks-about-new-cta a:hover{background:#f7f5f1;color:#111}
+@media(max-width:950px){
+ .ks-site.ks-about-reimagined .ks-about-new-manifesto-grid,
+ .ks-site.ks-about-reimagined .ks-about-new-company{grid-template-columns:1fr;gap:45px}
+ .ks-site.ks-about-reimagined .ks-about-new-values-grid{gap:20px}
+ .ks-site.ks-about-reimagined .ks-about-new-values h3{font-size:clamp(37px,5vw,58px)}
+}
+@media(max-width:640px){
+ .ks-site.ks-about-reimagined .ks-about-new-hero{height:80svh;min-height:570px}
+ .ks-site.ks-about-reimagined .ks-about-new-hero-photo{background-position:65% center}
+ .ks-site.ks-about-reimagined .ks-about-new-hero-top{top:87px;left:6vw;right:6vw;font-size:8px}
+ .ks-site.ks-about-reimagined .ks-about-new-hero-top span:last-child{display:none}
+ .ks-site.ks-about-reimagined .ks-about-new-hero-content{padding:0 6vw 89px}
+ .ks-site.ks-about-reimagined .ks-about-new-hero-content h1{font-size:clamp(69px,15vw,108px);margin:19px 0}
+ .ks-site.ks-about-reimagined .ks-about-new-hero-content p{font-size:13px;max-width:330px}
+ .ks-site.ks-about-reimagined .ks-about-new-hero-bottom{left:6vw;right:6vw;font-size:8px}
+ .ks-site.ks-about-reimagined .ks-about-new-hero-bottom span:first-child{max-width:190px}
+ .ks-site.ks-about-reimagined .ks-about-new-manifesto,
+ .ks-site.ks-about-reimagined .ks-about-new-values{padding:78px 6vw 86px}
+ .ks-site.ks-about-reimagined .ks-about-new-meta{font-size:9px;letter-spacing:.08em}
+ .ks-site.ks-about-reimagined .ks-about-new-meta span:last-child{text-align:right}
+ .ks-site.ks-about-reimagined .ks-about-new-manifesto-grid{margin-top:49px;gap:39px}
+ .ks-site.ks-about-reimagined .ks-about-new-manifesto h2{font-size:clamp(63px,13vw,90px)}
+ .ks-site.ks-about-reimagined .ks-about-new-quote{padding:95px 6vw;min-height:420px}
+ .ks-site.ks-about-reimagined .ks-about-new-quote h2{font-size:clamp(66px,13vw,95px)}
+ .ks-site.ks-about-reimagined .ks-about-new-values-grid{grid-template-columns:1fr;margin-top:55px;gap:36px}
+ .ks-site.ks-about-reimagined .ks-about-new-values article{min-height:230px}
+ .ks-site.ks-about-reimagined .ks-about-new-values h3{font-size:55px}
+ .ks-site.ks-about-reimagined .ks-about-new-company{padding:89px 6vw 94px}
+ .ks-site.ks-about-reimagined .ks-about-new-company h2{font-size:clamp(60px,12.5vw,85px)}
+ .ks-site.ks-about-reimagined .ks-about-new-cta{padding:88px 6vw 100px}
+ .ks-site.ks-about-reimagined .ks-about-new-cta h2{font-size:clamp(70px,14vw,105px)}
+}
