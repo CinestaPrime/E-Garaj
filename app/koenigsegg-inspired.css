@@ -392,3 +392,10 @@
 @media(max-width:520px){
  .ks-site .ks-hero-video{object-position:59% center}
 }
+
+
+/* Prevent a black video element from flashing on hard refresh.
+   Keep a neutral cinematic background until the first video frame is decoded. */
+.ks-site .ks-hero{background:linear-gradient(128deg,#36383c 0%,#1d2228 52%,#474a4b 100%)}
+.ks-site .ks-hero-video{opacity:0}
+.ks-site .ks-hero-video.ks-hero-video-ready{opacity:1}
