@@ -1,11 +1,11 @@
 import Link from "next/link";
 
-export default function BrandFooter() {
+export default function BrandFooter({studio=false}:{studio?:boolean}) {
   return (
     <footer className="site-footer">
       <div className="footer-inner">
         <div className="footer-brand">
-          <Link href="/" aria-label="E-GARAJ ana sayfa"><img src="/e-garaj-logo.svg" alt="E-GARAJ" className="footer-logo" /></Link>
+          <Link href="/" aria-label="E-GARAJ ana sayfa"><img src={studio?"/e-garage-metallic-header.svg":"/e-garaj-logo.svg"} alt="e-GARAGE" className="footer-logo" /></Link>
           <p>Otomobil tutkusunu dijital tasarım deneyimiyle buluşturan yeni nesil garaj.</p>
           <span className="footer-by">Bir <a href="https://cinestaai.com" target="_blank" rel="noopener noreferrer">CinestaAI</a> markasıdır.</span>
         </div>
