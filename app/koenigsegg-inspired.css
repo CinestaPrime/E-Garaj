@@ -940,3 +940,489 @@
  z-index:1;
  background:linear-gradient(180deg,transparent 0%,rgba(0,0,0,.24) 22%,rgba(0,0,0,.85) 100%);
 }
+
+
+/* -----------------------------------------------------------------------
+   E-GARAJ STUDIO / Audi-inspired light configurator (only the studio page)
+   ----------------------------------------------------------------------- */
+.ks-site.ks-studio.ks-studio-config{
+ background:#fafafa;
+ color:#17191b;
+}
+.ks-site.ks-studio.ks-studio-config .ks-nav.ks-nav-minimal{
+ position:absolute!important;
+ top:0;
+ left:0;
+ right:0;
+ z-index:80;
+ height:70px;
+ padding:0 5vw;
+ background:#f8f8f8!important;
+ background-color:#f8f8f8!important;
+ border:0!important;
+ border-bottom:1px solid #e9e9e9!important;
+ box-shadow:none!important;
+ backdrop-filter:none!important;
+ -webkit-backdrop-filter:none!important;
+}
+.ks-site.ks-studio.ks-studio-config .ks-nav .ks-brand img{
+ width:145px;
+ max-height:34px;
+ filter:brightness(.16);
+}
+.ks-site.ks-studio.ks-studio-config .ks-nav .ks-menu-trigger{
+ color:#202328;
+ text-shadow:none;
+ font-size:11px;
+}
+.ks-site.ks-studio.ks-studio-config .ks-nav .ks-menu-bars i{
+ background:#202328;
+ box-shadow:none;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-top{
+ padding:114px 5vw 0;
+ background:#fff;
+ border-bottom:1px solid #efefef;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-intro{
+ max-width:1440px;
+ margin:0 auto;
+ position:relative;
+ z-index:2;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-eyebrow{
+ display:block;
+ margin-bottom:12px;
+ color:#8b8c8d;
+ font-size:10px;
+ font-weight:700;
+ letter-spacing:.13em;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-intro h1{
+ font:500 clamp(34px,3.5vw,49px)/1.04 'DM Sans',Arial,sans-serif;
+ letter-spacing:-.055em;
+ margin:0 0 12px;
+ color:#18191b;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-intro p{
+ font:600 10px/1.5 'DM Sans',Arial,sans-serif;
+ color:#777b80;
+ letter-spacing:.065em;
+ margin:0;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-stage{
+ max-width:1530px;
+ margin:-3px auto 0;
+ min-height:470px;
+ display:grid;
+ grid-template-columns:minmax(240px,282px) minmax(0,1fr) minmax(240px,282px);
+ align-items:center;
+ position:relative;
+ gap:6px;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-selection{
+ grid-column:1;
+ grid-row:1;
+ position:relative;
+ z-index:4;
+ align-self:center;
+ width:100%;
+ padding:26px 24px 24px;
+ background:rgba(255,255,255,.98);
+ color:#202224;
+ border:1px solid #eaeaea;
+ border-radius:26px;
+ box-shadow:0 10px 34px rgba(30,34,39,.095),0 2px 8px rgba(30,34,39,.035);
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-card-caption{
+ font:700 9px/1.5 'DM Sans',Arial,sans-serif;
+ letter-spacing:.16em;
+ color:#888d92;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-selection h2{
+ font:600 22px/1.2 'DM Sans',Arial,sans-serif;
+ letter-spacing:-.04em;
+ margin:9px 0 7px;
+ color:#1c2023;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-card-subtitle{
+ font-size:12px;
+ line-height:1.55;
+ color:#7c8085;
+ margin:0 0 19px;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-selection label{
+ display:block;
+ margin:12px 0 6px;
+ color:#696e74;
+ font:700 10px/1.4 'DM Sans',Arial,sans-serif;
+ letter-spacing:.1em;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-selection select{
+ width:100%;
+ height:41px;
+ appearance:auto;
+ -webkit-appearance:auto;
+ color:#272a2c;
+ background:#f7f7f7;
+ border:1px solid #e0e2e4;
+ border-radius:10px;
+ padding:0 12px;
+ font:500 13px 'DM Sans',Arial,sans-serif;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-selection select:disabled{
+ color:#717579;
+ opacity:1;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-selection-note{
+ display:block;
+ font-size:10px;
+ line-height:1.65;
+ color:#929596;
+ margin:14px 0 18px;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-selection button.ks-config-save,
+.ks-site.ks-studio.ks-studio-config .ks-config-selection button.ks-config-load{
+ width:100%;
+ min-height:40px;
+ display:block;
+ border-radius:24px;
+ font:700 10px/1.4 'DM Sans',Arial,sans-serif;
+ letter-spacing:.04em;
+ cursor:pointer;
+ transition:background .2s,border-color .2s,transform .2s;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-save{
+ color:white;
+ background:#326bd9;
+ border:1px solid #326bd9;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-save:hover{
+ background:#2252b6;
+ border-color:#2252b6;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-load{
+ margin-top:9px;
+ background:white;
+ color:#35383b;
+ border:1px solid #d5d7d9;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-load:hover{
+ background:#f1f2f4;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-status{
+ font-size:11px;
+ margin:12px 0 0;
+ color:#2c61bd;
+ line-height:1.5;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-vehicle{
+ grid-column:2;
+ grid-row:1;
+ align-self:stretch;
+ position:relative;
+ height:470px;
+ min-width:0;
+ background:#fff;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-vehicle .ks-360-stage{
+ position:absolute;
+ inset:0;
+ width:100%;
+ height:100%;
+ overflow:hidden;
+ display:block;
+ background:#fff;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-vehicle .ks-360-model{
+ display:block;
+ width:100%;
+ height:100%;
+ background:transparent;
+ --poster-color:transparent;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-vehicle .ks-360-hint{
+ bottom:25px;
+ color:#626870;
+ text-shadow:none;
+ font-size:9px;
+ letter-spacing:.12em;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-vehicle .ks-360-empty{
+ color:#282a2d;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-vehicle .ks-360-empty small{
+ color:#777;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-viewer-label{
+ position:absolute;
+ right:20px;
+ top:34px;
+ font:700 11px 'DM Sans',Arial,sans-serif;
+ letter-spacing:.06em;
+ color:#81868a;
+ pointer-events:none;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-viewer-label span{
+ font-size:9px;
+ letter-spacing:.1em;
+ margin-left:5px;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-stage-balance{
+ grid-column:3;
+ grid-row:1;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-customize{
+ background:#fafafa;
+ color:#222426;
+ padding:20px 5vw 66px;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-tabs{
+ max-width:1440px;
+ margin:0 auto 26px;
+ background:#f2f2f2;
+ border:1px solid #e5e5e5;
+ border-radius:35px;
+ padding:4px;
+ display:grid;
+ grid-template-columns:repeat(6,minmax(0,1fr));
+ gap:4px;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-tabs button{
+ padding:11px 5px;
+ border:0;
+ border-radius:25px;
+ color:#3f4246;
+ background:transparent;
+ font:600 12px/1.3 'DM Sans',Arial,sans-serif;
+ cursor:pointer;
+ transition:background .2s,color .2s,box-shadow .2s;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-tabs button:hover{background:#e9e9e9}
+.ks-site.ks-studio.ks-studio-config .ks-config-tabs button.active,
+.ks-site.ks-studio.ks-studio-config .ks-config-tabs button.active:hover{
+ background:#326bd9;
+ color:white;
+ box-shadow:0 2px 7px rgba(50,107,217,.2);
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-options{
+ max-width:1440px;
+ margin:0 auto;
+ display:grid;
+ grid-template-columns:minmax(0,1.8fr) minmax(315px,.8fr);
+ gap:clamp(26px,4vw,66px);
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-options-heading{
+ display:flex;
+ align-items:baseline;
+ justify-content:space-between;
+ gap:12px;
+ margin:0 0 21px;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-options-heading h2{
+ margin:0 0 5px;
+ font:600 18px 'DM Sans',Arial,sans-serif;
+ letter-spacing:-.03em;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-options-heading span{
+ display:block;
+ font:500 11px/1.4 'DM Sans',Arial,sans-serif;
+ color:#94989d;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-options-heading strong{
+ font:600 10px 'DM Sans',Arial,sans-serif;
+ color:#777d83;
+ white-space:nowrap;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-color-list{
+ display:flex;
+ align-items:flex-start;
+ gap:clamp(8px,.85vw,14px);
+ padding:3px 0 12px;
+ overflow-x:auto;
+ scrollbar-width:thin;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-color-choice{
+ flex:1 0 64px;
+ min-width:64px;
+ max-width:112px;
+ display:flex;
+ flex-direction:column;
+ align-items:center;
+ gap:9px;
+ padding:0 2px;
+ background:transparent;
+ border:0;
+ cursor:pointer;
+ font:600 10px/1.3 'DM Sans',Arial,sans-serif;
+ color:#393d40;
+ text-align:center;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-color-sample{
+ width:min(100%,83px);
+ height:66px;
+ border:1px solid #d5d7d9;
+ border-radius:13px;
+ box-shadow:0 2px 5px #00000015,inset 0 1px 0 #ffffff66;
+ transition:outline .15s,box-shadow .15s,transform .15s;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-color-choice.selected .ks-config-color-sample{
+ outline:3px solid #262b30;
+ outline-offset:3px;
+ box-shadow:0 3px 9px #0000002c;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-color-choice:hover .ks-config-color-sample{
+ transform:translateY(-2px);
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-color-name{
+ max-width:100px;
+ min-height:28px;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-wheel-list{
+ display:grid;
+ grid-template-columns:repeat(4,minmax(0,1fr));
+ gap:9px;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-wheel-choice{
+ border:1px solid transparent;
+ background:transparent;
+ border-radius:12px;
+ display:flex;
+ flex-direction:column;
+ justify-content:flex-start;
+ align-items:center;
+ cursor:pointer;
+ color:#35393e;
+ padding:8px 3px;
+ gap:5px;
+ font:600 10px 'DM Sans',Arial,sans-serif;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-wheel-choice.selected{
+ border-color:#326bd9;
+ background:#edf2ff;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-wheel-choice:hover{background:#eaeef4}
+.ks-site.ks-studio.ks-studio-config .ks-config-wheel-art{
+ display:block;
+ width:clamp(48px,5vw,72px);
+ max-width:100%;
+ height:auto;
+ filter:drop-shadow(0 3px 3px #00000022);
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-wheel-choice small{
+ color:#96999c;
+ font:500 9px 'DM Sans',Arial,sans-serif;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-wheel-note{
+ color:#a1a3a5;
+ font-size:10px;
+ line-height:1.6;
+ margin:14px 0 0;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-coming-soon{
+ min-height:230px;
+ max-width:1440px;
+ margin:auto;
+ border-top:1px solid #e7e7e7;
+ padding:45px 10px;
+ color:#202428;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-coming-soon h2{font-size:26px;font-weight:600;margin:0 0 13px}
+.ks-site.ks-studio.ks-studio-config .ks-config-coming-soon p{max-width:630px;font-size:14px;color:#83878b;line-height:1.7}
+.ks-site.ks-studio.ks-studio-config .ks-config-coming-soon button{
+ border:1px solid #ccc;
+ border-radius:25px;
+ background:#fff;
+ padding:12px 20px;
+ font:600 11px 'DM Sans',Arial,sans-serif;
+ cursor:pointer;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-footnote{
+ padding:15px 5vw 24px;
+ font:500 10px/1.8 'DM Sans',Arial,sans-serif;
+ color:#a4a6a9;
+ background:#fafafa;
+}
+@media(max-width:1100px){
+ .ks-site.ks-studio.ks-studio-config .ks-config-stage{
+  grid-template-columns:250px minmax(0,1fr) 40px;
+ }
+ .ks-site.ks-studio.ks-studio-config .ks-config-options{
+  grid-template-columns:minmax(0,1fr) minmax(250px,.75fr);
+  gap:28px;
+ }
+ .ks-site.ks-studio.ks-studio-config .ks-config-color-choice{flex-basis:66px}
+}
+@media(max-width:820px){
+ .ks-site.ks-studio.ks-studio-config .ks-config-top{padding:103px 5vw 22px}
+ .ks-site.ks-studio.ks-studio-config .ks-config-stage{
+  display:grid;
+  grid-template-columns:minmax(0,1fr);
+  grid-template-rows:360px auto;
+  gap:12px;
+  margin-top:16px;
+ }
+ .ks-site.ks-studio.ks-studio-config .ks-config-vehicle{
+  grid-column:1;
+  grid-row:1;
+  height:360px;
+ }
+ .ks-site.ks-studio.ks-studio-config .ks-config-selection{
+  grid-column:1;
+  grid-row:2;
+  max-width:600px;
+  width:100%;
+  margin:0 auto 12px;
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  column-gap:15px;
+ }
+ .ks-site.ks-studio.ks-studio-config .ks-config-card-caption,
+ .ks-site.ks-studio.ks-studio-config .ks-config-selection h2,
+ .ks-site.ks-studio.ks-studio-config .ks-config-card-subtitle,
+ .ks-site.ks-studio.ks-studio-config .ks-config-selection-note,
+ .ks-site.ks-studio.ks-studio-config .ks-config-save,
+ .ks-site.ks-studio.ks-studio-config .ks-config-load,
+ .ks-site.ks-studio.ks-studio-config .ks-config-status{grid-column:1/-1}
+ .ks-site.ks-studio.ks-studio-config .ks-config-stage-balance{display:none}
+ .ks-site.ks-studio.ks-studio-config .ks-config-options{grid-template-columns:1fr;gap:30px}
+ .ks-site.ks-studio.ks-studio-config .ks-config-tabs button{font-size:11px}
+}
+@media(max-width:520px){
+ .ks-site.ks-studio.ks-studio-config .ks-nav.ks-nav-minimal{height:64px;padding:0 18px}
+ .ks-site.ks-studio.ks-studio-config .ks-nav .ks-brand img{width:115px}
+ .ks-site.ks-studio.ks-studio-config .ks-config-top{padding:95px 16px 16px}
+ .ks-site.ks-studio.ks-studio-config .ks-config-intro h1{font-size:37px}
+ .ks-site.ks-studio.ks-studio-config .ks-config-intro p{font-size:9px}
+ .ks-site.ks-studio.ks-studio-config .ks-config-stage{grid-template-rows:290px auto;gap:8px}
+ .ks-site.ks-studio.ks-studio-config .ks-config-vehicle{height:290px}
+ .ks-site.ks-studio.ks-studio-config .ks-config-selection{
+  display:block;
+  border-radius:21px;
+  padding:22px;
+ }
+ .ks-site.ks-studio.ks-studio-config .ks-config-viewer-label{top:12px;right:2px;font-size:10px}
+ .ks-site.ks-studio.ks-studio-config .ks-config-viewer-label span{font-size:8px}
+ .ks-site.ks-studio.ks-studio-config .ks-config-vehicle .ks-360-hint{bottom:9px;font-size:8px}
+ .ks-site.ks-studio.ks-studio-config .ks-config-customize{padding:21px 16px 38px}
+ .ks-site.ks-studio.ks-studio-config .ks-config-tabs{
+  display:flex;
+  overflow-x:auto;
+  gap:3px;
+  padding:4px;
+  white-space:nowrap;
+  scrollbar-width:thin;
+ }
+ .ks-site.ks-studio.ks-studio-config .ks-config-tabs button{
+  flex:0 0 auto;
+  padding:10px 14px;
+  font-size:11px;
+ }
+ .ks-site.ks-studio.ks-studio-config .ks-config-options-heading{align-items:flex-start}
+ .ks-site.ks-studio.ks-studio-config .ks-config-options-heading strong{padding-top:5px}
+ .ks-site.ks-studio.ks-studio-config .ks-config-color-choice{min-width:74px}
+ .ks-site.ks-studio.ks-studio-config .ks-config-wheel-list{grid-template-columns:repeat(4,minmax(0,1fr))}
+ .ks-site.ks-studio.ks-studio-config .ks-config-wheel-art{width:55px}
+ .ks-site.ks-studio.ks-studio-config .ks-config-wheel-choice{font-size:9px}
+ .ks-site.ks-studio.ks-studio-config .ks-config-footnote{padding:12px 16px 20px}
+}
