@@ -574,3 +574,102 @@
   margin-bottom:27px;
  }
 }
+
+
+/* Mobile layout pass: true full-screen centered cinematic hero. */
+@media(max-width:820px){
+ .ks-site{width:100%;min-width:0;overflow-x:clip}
+ .ks-site .ks-hero{
+  width:100%;
+  height:100svh;
+  min-height:100svh;
+  max-height:none;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+ }
+ .ks-site .ks-hero-video{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  object-position:50% 50%;
+ }
+ .ks-site .ks-hero-tint{
+  background:linear-gradient(180deg,rgba(0,0,0,.24) 0%,rgba(0,0,0,.12) 35%,rgba(0,0,0,.27) 72%,rgba(0,0,0,.42) 100%);
+  pointer-events:none;
+ }
+ .ks-site .ks-hero-copy.ks-hero-copy-cinematic{
+  width:100%;
+  max-width:100%;
+  margin:0 auto;
+  padding:0 22px;
+  top:-4vh;
+  text-align:center;
+ }
+ .ks-site .ks-hero-copy-cinematic h1{
+  font-size:clamp(43px,9.4vw,78px);
+  line-height:.94;
+  max-width:100%;
+  overflow-wrap:normal;
+ }
+ .ks-site .ks-hero-copy-cinematic p{
+  width:100%;
+  max-width:100%;
+  margin:0 auto;
+  padding:0;
+  white-space:normal;
+  font-size:clamp(12px,2.65vw,15px);
+  line-height:1.55;
+ }
+ .ks-site .ks-nav.ks-nav-minimal{
+  height:68px;
+  padding:0 22px;
+ }
+ .ks-site .ks-intro h2,.ks-site .ks-editorial h2,.ks-site .ks-brand-story h2{
+  overflow-wrap:break-word;
+ }
+ .ks-site .ks-intro-columns,.ks-site .ks-editorial-head,.ks-site .ks-brand-story{
+  min-width:0;
+ }
+}
+@media(max-width:520px){
+ .ks-site .ks-hero{
+  height:100dvh;
+  min-height:100svh;
+  max-height:none;
+ }
+ .ks-site .ks-hero-video{object-position:center center}
+ .ks-site .ks-hero-copy.ks-hero-copy-cinematic{
+  top:-4svh;
+  padding:0 14px;
+ }
+ .ks-site .ks-hero-copy-cinematic h1{
+  font-size:clamp(38px,10.1vw,55px);
+  letter-spacing:-.025em;
+  line-height:.98;
+  margin:0 0 17px;
+ }
+ .ks-site .ks-hero-copy-cinematic p{
+  font-size:clamp(11px,2.6vw,13px);
+  letter-spacing:-.015em;
+  text-wrap:balance;
+ }
+ .ks-site .ks-nav.ks-nav-minimal{height:66px;padding:0 18px}
+ .ks-site .ks-nav.ks-nav-minimal .ks-brand img{width:116px;max-width:40vw}
+ .ks-site .ks-intro,.ks-site .ks-editorial{padding-inline:6vw}
+ .ks-site .ks-intro h2,.ks-site .ks-editorial h2,.ks-site .ks-brand-story h2{
+  font-size:clamp(44px,11.7vw,68px);
+  line-height:.98;
+ }
+ .ks-site .ks-intro-columns,.ks-site .ks-editorial-head{gap:26px}
+ .ks-site .ks-spotlight h2{font-size:clamp(56px,13vw,72px)}
+ .ks-site .ks-spotlight-content{padding:65px 6vw}
+}
+@media(max-width:380px){
+ .ks-site .ks-hero-copy-cinematic h1{font-size:clamp(34px,9.7vw,39px)}
+ .ks-site .ks-hero-copy-cinematic p{font-size:11px}
+}
