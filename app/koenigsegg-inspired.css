@@ -757,3 +757,43 @@
  }
  .ks-studio .ks-360-hint{font-size:9px;letter-spacing:.09em;bottom:15px}
 }
+
+
+/* Spotlight studio CTA: restrained premium design with no arrow. */
+.ks-site .ks-spotlight .ks-spotlight-studio-btn{
+ display:inline-flex;
+ align-items:center;
+ justify-content:center;
+ gap:0;
+ min-width:208px;
+ min-height:50px;
+ padding:16px 29px;
+ border:1px solid rgba(255,255,255,.78);
+ border-radius:3px;
+ background:rgba(14,17,20,.3);
+ color:#fff;
+ font-family:'DM Sans',Arial,sans-serif;
+ font-size:11px;
+ font-weight:700;
+ letter-spacing:.17em;
+ text-align:center;
+ text-decoration:none;
+ box-shadow:0 6px 24px rgba(0,0,0,.12);
+ backdrop-filter:blur(8px);
+ -webkit-backdrop-filter:blur(8px);
+ transition:background .25s ease,color .25s ease,border-color .25s ease,box-shadow .25s ease;
+}
+.ks-site .ks-spotlight .ks-spotlight-studio-btn:hover,
+.ks-site .ks-spotlight .ks-spotlight-studio-btn:focus-visible{
+ background:#f4f3f0;
+ border-color:#f4f3f0;
+ color:#17191b;
+ box-shadow:0 10px 30px rgba(0,0,0,.22);
+}
+@media(max-width:520px){
+ .ks-site .ks-spotlight .ks-spotlight-studio-btn{
+  min-width:190px;
+  min-height:48px;
+  padding:14px 24px;
+ }
+}
