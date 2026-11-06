@@ -77,8 +77,6 @@ export default function Studio(){
   <section className="ks-config-top" aria-label="Araç yapılandırma stüdyosu">
    <header className="ks-config-intro">
     <span className="ks-config-eyebrow">E-GARAJ / DİJİTAL ARAÇ STÜDYOSU</span>
-    <h1>e-tron GT</h1>
-    <p>360° DİJİTAL ÖNİZLEME <span aria-hidden="true">·</span> AUDI E-TRON GT RS</p>
    </header>
    <div className="ks-config-stage">
     <aside className="ks-config-selection" aria-label="Araç bilgileri">
