@@ -7,6 +7,24 @@ import type {Metadata} from "next";
 type Section={heading:string; paragraphs:string[]; bullets?:string[]};
 type InfoPage={title:string; intro:string; sections:Section[]};
 const pages:Record<string,InfoPage>={
+ "genel-bakis":{
+  title:"Genel Bakış",
+  intro:"E-GARAGE, otomobil tutkusunu dijital araç keşfi, kişiselleştirme ve otomotiv ürünleri ekosistemiyle buluşturmak üzere geliştirilen bir platformdur.",
+  sections:[
+   {heading:"E-GARAGE nedir?",paragraphs:["CinestaAI bünyesinde geliştirilen E-GARAGE, otomobil sahiplerinin araçlarını dijital ortamda keşfetmesine ve tasarım tercihlerini oluşturmasına yönelik bir otomotiv teknolojisi girişimidir.","Uzun vadeli vizyonumuz, otomobil sahipleriyle aksesuar, yedek parça ve ilgili hizmetleri sunan işletmeleri bir araya getiren, kullanıcı odaklı bir dijital deneyim oluşturmaktır."]},
+   {heading:"Mevcut deneyim",paragraphs:["Bugün araç stüdyomuzda örnek bir otomobilin 360 derece görünümü incelenebilir, desteklenen gövde renkleri denenebilir ve tasarım tercihleri tarayıcıda kaydedilebilir.","Marka, model ve yıl seçimi için sunulan kontroller, gelecekte geliştirilecek kapsamlı deneyimin bir parçasıdır; her seçim için ayrı bir üç boyutlu model henüz bulunmamaktadır."]},
+   {heading:"Geliştirme hedefimiz",paragraphs:["Ürün keşfi, araç kişiselleştirme ve ileride kurulmasını hedeflediğimiz servis ağı arasında daha bütünleşik bir deneyim geliştirmek istiyoruz.","Uyumlu aksesuarları seçilen araç üzerinde değerlendirme, ürün sağlayıcılarına erişim ve daha fazla model desteği gelecekteki geliştirme alanlarımız arasındadır."]}
+  ]
+ },
+ "teknoloji":{
+  title:"Teknoloji",
+  intro:"Araç tasarımını erişilebilir ve etkileşimli hale getirmek için görselleştirme, yazılım ve kullanıcı deneyimini bir araya getiriyoruz.",
+  sections:[
+   {heading:"Üç boyutlu görselleştirme",paragraphs:["Tarayıcı tabanlı araç stüdyosu, desteklenen örnek otomobil modelini farklı açılardan incelemeye ve gövde renklerini dijital olarak deneyimlemeye olanak tanır.","Mevcut görsel deneyim bir prototip niteliğindedir; her marka, model, donanım veya jant seçeneğinin anlık görsel karşılığı henüz bulunmamaktadır."]},
+   {heading:"Kişiselleştirme verileri",paragraphs:["Kullanıcıların stüdyoda kaydettiği bazı tercihlerin aynı cihaz ve tarayıcıda yeniden açılabilmesi için yerel tarayıcı depolama özelliklerinden yararlanılır.","Bu yaklaşım kullanıcıların tasarımlarını sürdürmesine yardımcı olur; kayıtların başka cihazlarda kendiliğinden eşitlenmesi anlamına gelmez."]},
+   {heading:"Araç ve ürün uyumluluğu vizyonu",paragraphs:["Geliştirme hedeflerimiz arasında otomobil marka, model ve yıl verileriyle ürün kataloglarını ilişkilendirerek daha anlamlı bir aksesuar ve yedek parça keşif sistemi kurmak bulunuyor.","Teknik ürün uyumluluğunun üretici verileri, parça numaraları ve gerektiğinde uzman değerlendirmesiyle doğrulanması gerekir. Mevcut araç stüdyosu bu doğrulamanın yerine geçmez."]}
+  ]
+ },
  "surdurulebilirlik":{
   title:"Sürdürülebilirlik",
   intro:"Otomotivde daha bilinçli seçimleri destekleyen, uzun ömürlü kullanım ve kaynak verimliliğini önemseyen bir dijital deneyim geliştirmeyi hedefliyoruz.",
@@ -112,6 +130,8 @@ const pages:Record<string,InfoPage>={
   ]
  }
 };
+const worldSlugs=["genel-bakis","teknoloji","surdurulebilirlik","tasarim","servisler","servis-hizmetleri","modeller","aracinizi-taniyin"];
+const platformSlugs=["kullanim-sartlari-ve-gizlilik-politikasi","cerez-politikasi","gizlilik-bildirimi-hizmeti","cerez-ayarlari","iletisim-bilgileri"];
 export function generateStaticParams(){return Object.keys(pages).map(slug=>({slug}));}
 export async function generateMetadata({params}:{params:Promise<{slug:string}>}):Promise<Metadata>{
  const {slug}=await params;const page=pages[slug];
@@ -120,13 +140,15 @@ export async function generateMetadata({params}:{params:Promise<{slug:string}>})
 export default async function InformationPage({params}:{params:Promise<{slug:string}>}){
  const {slug}=await params;const page=pages[slug];
  if(!page)notFound();
+ const isWorldPage=worldSlugs.includes(slug);
+ const navigation=isWorldPage?worldSlugs:platformSlugs;
  return <main className="ks-site ks-info-site">
   <SiteHeader/>
-  <div className="ks-info-breadcrumb"><Link href="/">E-GARAGE</Link><span aria-hidden="true">/</span><span>{["surdurulebilirlik","tasarim","servisler","servis-hizmetleri","modeller","aracinizi-taniyin"].includes(slug)?"E-GARAGE DÜNYASI":"BİLGİLENDİRME"}</span></div>
+  <div className="ks-info-breadcrumb"><Link href="/">E-GARAGE</Link><span aria-hidden="true">/</span><span>{isWorldPage?"E-GARAGE DÜNYASI":"PLATFORM"}</span></div>
   <div className="ks-info-layout">
    <aside className="ks-info-sidebar" aria-label="Bilgi sayfaları">
-    <span>İÇİNDEKİLER</span>
-    {Object.entries(pages).map(([key,value])=><Link key={key} href={`/bilgi/${key}`} className={slug===key?"active":""} aria-current={slug===key?"page":undefined}>{value.title}</Link>)}
+    <span>{isWorldPage?"E-GARAGE DÜNYASI":"PLATFORM / İÇİNDEKİLER"}</span>
+    {navigation.map((key)=><Link key={key} href={`/bilgi/${key}`} className={slug===key?"active":""} aria-current={slug===key?"page":undefined}>{pages[key].title}</Link>)}
    </aside>
    <article className="ks-info-document">
     <span className="ks-info-eyebrow">E-GARAGE / KURUMSAL BİLGİLER</span>
