@@ -897,3 +897,46 @@
  .ks-site .ks-platform-subpage{padding:140px 6vw 90px}
  .ks-site .ks-platform-subpage h1{font-size:clamp(54px,13vw,80px)}
 }
+
+
+/* Platform card photography: user-provided artwork, optimized as WebP. */
+.ks-site .ks-editorial-grid-four .ks-tile-photo-studio,
+.ks-site .ks-editorial-grid-four .ks-tile-photo-products,
+.ks-site .ks-editorial-grid-four .ks-tile-photo-partners,
+.ks-site .ks-editorial-grid-four .ks-tile-photo-blog{
+ position:absolute;
+ inset:0;
+ display:block;
+ background-repeat:no-repeat;
+ background-size:cover;
+ filter:brightness(.82) saturate(.86);
+ transition:transform .55s cubic-bezier(.2,.7,.3,1), filter .55s ease;
+}
+.ks-site .ks-editorial-grid-four .ks-tile-photo-studio{
+ background-image:url('/platform-studio.webp');
+ background-position:52% center;
+}
+.ks-site .ks-editorial-grid-four .ks-tile-photo-products{
+ background-image:url('/platform-products.webp');
+ background-position:52% center;
+}
+.ks-site .ks-editorial-grid-four .ks-tile-photo-partners{
+ background-image:url('/platform-partners.webp');
+ background-position:50% center;
+}
+.ks-site .ks-editorial-grid-four .ks-tile-photo-blog{
+ background-image:url('/platform-blog.webp');
+ background-position:50% center;
+}
+.ks-site .ks-editorial-grid-four .ks-editorial-tile:hover .ks-tile-photo-studio,
+.ks-site .ks-editorial-grid-four .ks-editorial-tile:hover .ks-tile-photo-products,
+.ks-site .ks-editorial-grid-four .ks-editorial-tile:hover .ks-tile-photo-partners,
+.ks-site .ks-editorial-grid-four .ks-editorial-tile:hover .ks-tile-photo-blog{
+ transform:scale(1.045);
+ filter:brightness(.93) saturate(.96);
+}
+.ks-site .ks-editorial-grid-four .ks-tile-info{
+ position:absolute;
+ z-index:1;
+ background:linear-gradient(180deg,transparent 0%,rgba(0,0,0,.24) 22%,rgba(0,0,0,.85) 100%);
+}
