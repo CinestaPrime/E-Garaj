@@ -1,13 +1,13 @@
 "use client";
 
-import {createElement,useCallback,useEffect,useRef,useState} from "react";
+import {createElement,useEffect,useRef,useState} from "react";
 import Script from "next/script";
 
 const MODEL_URL="/models/audi-e-tron-gt-rs-360.glb";
 
 type ViewerMaterial={
  pbrMetallicRoughness:{
-  setBaseColorFactor:(rgba:number[])=>void;
+  setBaseColorFactor:(rgba:string|number[])=>void;
   setMetallicFactor?:(value:number)=>void;
   setRoughnessFactor?:(value:number)=>void;
  };
@@ -16,39 +16,81 @@ type ViewerElement=HTMLElement&{
  model?:{materials:ViewerMaterial[]};
 };
 
-function hexToLinearRGBA(hex:string){
- const digits=hex.replace("#","");
- const channels=[0,2,4].map(i=>parseInt(digits.slice(i,i+2),16)/255);
- // model-viewer expects linearized RGBA values for material editing.
- return [...channels.map(v=>v<=0.04045?v/12.92:Math.pow((v+0.055)/1.055,2.4)),1];
-}
-
 export default function Studio3DViewer({color}:{color:string}){
  const [available,setAvailable]=useState<boolean|null>(null);
- const [modelLoaded,setModelLoaded]=useState(false);
+ const [modelReady,setModelReady]=useState(false);
  const viewerRef=useRef<ViewerElement|null>(null);
+ const latestColor=useRef(color);
+ latestColor.current=color;
 
  useEffect(()=>{
-  let active=true;
+  let alive=true;
   const controller=new AbortController();
   void fetch(MODEL_URL,{method:"HEAD",signal:controller.signal})
-   .then(response=>{if(active)setAvailable(response.ok)})
-   .catch(()=>{if(active)setAvailable(false)});
-  return ()=>{active=false;controller.abort()};
+   .then(response=>{if(alive)setAvailable(response.ok)})
+   .catch(()=>{if(alive)setAvailable(false)});
+  return ()=>{alive=false;controller.abort()};
  },[]);
 
- const applyPaint=useCallback(()=>{
+ // Bind to the custom element's actual DOM "load" event. React's onLoad
+ // does not reliably handle model-viewer custom-element load events.
+ useEffect(()=>{
+  if(!available)return;
+  let disposed=false;
+  let interval:number|undefined;
+  let viewer:ViewerElement|null=null;
+
+  const paint=()=>{
+   if(disposed)return false;
+   const materials=viewer?.model?.materials;
+   if(!materials?.length)return false;
+   for(const material of materials){
+    const pbr=material.pbrMetallicRoughness;
+    if(!pbr?.setBaseColorFactor)continue;
+    // Passing CSS hex lets model-viewer perform sRGB -> linear conversion.
+    pbr.setBaseColorFactor(latestColor.current);
+    pbr.setMetallicFactor?.(0.38);
+    pbr.setRoughnessFactor?.(0.35);
+   }
+   setModelReady(true);
+   return true;
+  };
+
+  const handleLoad=()=>{paint()};
+  const connect=()=>{
+   if(disposed)return;
+   const element=viewerRef.current;
+   if(!element)return;
+   if(viewer!==element){
+    viewer?.removeEventListener("load",handleLoad);
+    viewer=element;
+    viewer.addEventListener("load",handleLoad);
+   }
+   if(paint()&&interval!==undefined){
+    window.clearInterval(interval);
+    interval=undefined;
+   }
+  };
+
+  void customElements.whenDefined("model-viewer").then(connect).catch(()=>{});
+  interval=window.setInterval(connect,300);
+  connect();
+  return ()=>{
+   disposed=true;
+   if(interval!==undefined)window.clearInterval(interval);
+   viewer?.removeEventListener("load",handleLoad);
+  };
+ },[available]);
+
+ // Live update color without reloading the GLB or resetting camera orbit.
+ useEffect(()=>{
+  if(!modelReady)return;
   const materials=viewerRef.current?.model?.materials;
   if(!materials?.length)return;
-  const rgba=hexToLinearRGBA(color);
   for(const material of materials){
-   material.pbrMetallicRoughness.setBaseColorFactor(rgba);
-   material.pbrMetallicRoughness.setMetallicFactor?.(0.55);
-   material.pbrMetallicRoughness.setRoughnessFactor?.(0.32);
+   material.pbrMetallicRoughness?.setBaseColorFactor(color);
   }
- },[color]);
-
- useEffect(()=>{if(modelLoaded)applyPaint()},[modelLoaded,applyPaint]);
+ },[color,modelReady]);
 
  return <div className="ks-360-stage" aria-label="Audi e-tron GT RS 360 derece 3D görüntüleyici">
   {available===true&&<>
@@ -66,7 +108,6 @@ export default function Studio3DViewer({color}:{color:string}){
     "environment-image":"neutral",
     "interaction-prompt":"none",
     "touch-action":"pan-y",
-    onLoad:()=>setModelLoaded(true),
     loading:"eager",
     className:"ks-360-model",
    })}
