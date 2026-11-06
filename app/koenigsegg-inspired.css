@@ -2538,3 +2538,48 @@
 @media(max-width:520px){
  .ks-site.ks-info-site .ks-info-breadcrumb{padding-top:31px}
 }
+
+
+/* Definitive separation for informational breadcrumb:
+   leave a full header-height clearance regardless of inherited positioning. */
+.ks-site.ks-info-site .ks-nav.ks-nav-minimal{
+ position:relative!important;
+ top:auto!important;
+ left:auto!important;
+ right:auto!important;
+ height:76px;
+ min-height:76px;
+ z-index:80;
+ display:flex;
+ align-items:center;
+}
+.ks-site.ks-info-site .ks-info-breadcrumb{
+ position:relative!important;
+ z-index:1;
+ display:flex;
+ margin-top:64px!important;
+ padding-top:0!important;
+ padding-bottom:0;
+ min-height:18px;
+}
+.ks-site.ks-info-site .ks-info-layout{
+ padding-top:55px;
+}
+@media(max-width:820px){
+ .ks-site.ks-info-site .ks-nav.ks-nav-minimal{
+  height:68px;min-height:68px;
+ }
+ .ks-site.ks-info-site .ks-info-breadcrumb{
+  margin-top:55px!important;
+ }
+ .ks-site.ks-info-site .ks-info-layout{padding-top:43px}
+}
+@media(max-width:520px){
+ .ks-site.ks-info-site .ks-nav.ks-nav-minimal{
+  height:66px;min-height:66px;
+ }
+ .ks-site.ks-info-site .ks-info-breadcrumb{
+  margin-top:48px!important;
+ }
+ .ks-site.ks-info-site .ks-info-layout{padding-top:32px}
+}
