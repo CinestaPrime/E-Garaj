@@ -2269,3 +2269,27 @@
   letter-spacing:-.035em;
  }
 }
+
+
+/* About hero-story heading: compact uppercase and one line at every viewport. */
+.ks-site.ks-about-reimagined .ks-about-new-story-intro{
+ max-width:100%;
+}
+.ks-site.ks-about-reimagined .ks-about-new-story-intro h2{
+ font-family:'DM Sans',Arial,sans-serif;
+ font-size:clamp(11px,2.05vw,28px);
+ font-weight:700;
+ line-height:1.32;
+ letter-spacing:-.025em;
+ text-transform:uppercase;
+ white-space:nowrap;
+ max-width:100%;
+ margin:0 auto 27px;
+}
+@media(max-width:640px){
+ .ks-site.ks-about-reimagined .ks-about-new-story-intro h2{
+  font-size:clamp(10px,2.4vw,15px);
+  line-height:1.35;
+  letter-spacing:-.035em;
+ }
+}
