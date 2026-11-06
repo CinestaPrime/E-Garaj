@@ -158,7 +158,7 @@
 .ks-site .ks-nav nav a{font-size:8px;letter-spacing:.05em}
 .ks-site .ks-brand img{width:83px}
 .ks-site .ks-hero{min-height:580px;height:81svh}
-.ks-site .ks-hero-photo{background-position:59% center}
+
 .ks-site .ks-hero-tint{background:linear-gradient(90deg,#000b,#0006),linear-gradient(0deg,#000b,transparent 60%)}
 .ks-site .ks-hero-copy{margin:65px 24px 0}
 .ks-site .ks-hero-copy h1{font-size:clamp(62px,14vw,83px)}
