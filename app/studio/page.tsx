@@ -151,6 +151,6 @@ export default function Studio(){
    </div>:<div className="ks-config-coming-soon"><h2>{tabs.find(item=>item.id===tab)?.label}</h2><p>Bu kategori için özelleştirme seçenekleri hazırlanıyor. Dış Tasarım sekmesinde gövde rengini değiştirebilir ve jant tercihlerini kaydedebilirsin.</p><button type="button" onClick={()=>setTab("dis")}>DIŞ TASARIMA DÖN</button></div>}
   </section>
   <div className="ks-config-footnote">3D modelde boya rengi bütün yüzeye uygulanabilir; model, yıl ve jant tercihleri henüz 3D görünümü değiştirmez. Araç markalarıyla resmî bağlantı bulunmamaktadır.</div>
-  <BrandFooter/>
+  <BrandFooter studio/>
  </main>;
 }
