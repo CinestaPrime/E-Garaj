@@ -24,7 +24,7 @@ export default function AboutPage(){
    <div className="ks-about-new-meta"><span>01 / BİZ KİMİZ</span><span>E-GARAGE / CINESTAAI</span></div>
    <div className="ks-about-new-story-intro">
     <span className="ks-about-new-smallline">E-GARAJ NEDİR, NEDEN KURULDU?</span>
-    <h2>Otomobil tutkusunu teknolojiyle buluşturuyoruz</h2>
+    <h2>OTOMOBİL TUTKUSUNU TEKNOLOJİYLE BULUŞTURUYORUZ</h2>
     <p>E-GARAGE (E-GARAJ), otomobil sahiplerinin araçlarını keşfetme, kişiselleştirme ve araçlarına uygun ürünlere ulaşma biçimini yeniden düşünmek için geliştirdiğimiz bir dijital otomotiv platformudur.</p>
    </div>
    <div className="ks-about-new-story-columns">
