@@ -1920,3 +1920,38 @@
  background-size:cover,cover;
  background-repeat:no-repeat,no-repeat;
 }
+
+
+/* About page typography refinements requested for the two statement areas. */
+.ks-site.ks-about-reimagined .ks-about-new-hero-top{
+ justify-content:flex-end;
+}
+.ks-site.ks-about-reimagined .ks-about-new-hero-top>span{
+ text-align:right;
+}
+.ks-site.ks-about-reimagined .ks-about-new-manifesto-grid>h2{
+ text-align:center;
+ justify-self:stretch;
+}
+.ks-site.ks-about-reimagined .ks-about-new-quote-inner{
+ text-align:center;
+ display:flex;
+ flex-direction:column;
+ align-items:center;
+}
+.ks-site.ks-about-reimagined .ks-about-new-quote h2{
+ text-align:center;
+}
+.ks-site.ks-about-reimagined .ks-about-new-quote p{
+ text-align:center;
+ margin-left:auto;
+ margin-right:auto;
+}
+@media(max-width:640px){
+ .ks-site.ks-about-reimagined .ks-about-new-hero-top>span:last-child{
+  display:block;
+ }
+ .ks-site.ks-about-reimagined .ks-about-new-manifesto-grid>h2{
+  font-size:clamp(60px,12.5vw,90px);
+ }
+}
