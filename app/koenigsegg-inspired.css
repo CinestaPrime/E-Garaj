@@ -446,3 +446,30 @@
  .ks-site .ks-spotlight-overlay{background:linear-gradient(270deg,rgba(0,0,0,.82),rgba(0,0,0,.21) 92%),linear-gradient(0deg,rgba(0,0,0,.65),transparent 76%)}
  .ks-site .ks-brand-story>div:first-child{text-align:right}
 }
+
+
+/* Reverse alternating homepage composition: intro RIGHT, showcase LEFT, platform RIGHT, brand LEFT. */
+@media(min-width:821px){
+ .ks-site .ks-intro-columns{grid-template-columns:minmax(280px,.65fr) minmax(0,1.5fr)}
+ .ks-site .ks-intro-columns>h2{grid-column:2;grid-row:1;text-align:right}
+ .ks-site .ks-intro-columns>div{grid-column:1;grid-row:1}
+ .ks-site .ks-editorial-head{grid-template-columns:minmax(240px,.6fr) minmax(0,1.4fr)}
+ .ks-site .ks-editorial-head>h2{grid-column:2;grid-row:1;text-align:right}
+ .ks-site .ks-editorial-head>p{grid-column:1;grid-row:1}
+ .ks-site .ks-spotlight{justify-content:flex-start}
+ .ks-site .ks-spotlight-content{margin-left:0;margin-right:auto;text-align:left;padding-left:8vw;padding-right:75px}
+ .ks-site .ks-spotlight-content p{margin-left:0;margin-right:auto}
+ .ks-site .ks-spotlight-overlay{background:linear-gradient(90deg,rgba(0,0,0,.87),rgba(0,0,0,.15) 85%),linear-gradient(0deg,rgba(0,0,0,.66),transparent 75%)}
+ .ks-site .ks-brand-story{grid-template-columns:minmax(0,1.35fr) minmax(0,.65fr)}
+ .ks-site .ks-brand-story>div:first-child{grid-column:1;grid-row:1;text-align:left}
+ .ks-site .ks-brand-story>div:last-child{grid-column:2;grid-row:1}
+}
+@media(max-width:820px){
+ .ks-site .ks-intro-columns>h2{text-align:right}
+ .ks-site .ks-editorial-head>h2{text-align:right}
+ .ks-site .ks-spotlight{justify-content:flex-start}
+ .ks-site .ks-spotlight-content{margin-left:0;margin-right:auto;text-align:left}
+ .ks-site .ks-spotlight-content p{margin-left:0;margin-right:auto}
+ .ks-site .ks-spotlight-overlay{background:linear-gradient(90deg,rgba(0,0,0,.82),rgba(0,0,0,.21) 92%),linear-gradient(0deg,rgba(0,0,0,.65),transparent 76%)}
+ .ks-site .ks-brand-story>div:first-child{text-align:left}
+}
