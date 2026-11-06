@@ -16,7 +16,7 @@
 .ks-site .ks-text-link{font-size:11px;font-weight:700;letter-spacing:.13em;border-bottom:1px solid currentColor;padding-bottom:11px;display:inline-flex;gap:38px;justify-content:space-between}
 .ks-site .ks-text-link:hover{color:#d0afa0}
 .ks-site .ks-hero{height:calc(100svh - 76px);min-height:640px;max-height:1080px;position:relative;overflow:hidden;display:flex;align-items:center;background:#050606}
-.ks-site .ks-hero-photo{position:absolute;inset:0;background:url('/audi-garage.jpg.png') center 49% / cover no-repeat;filter:brightness(.8) saturate(.64) contrast(1.07)}
+
 .ks-site .ks-hero-tint{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.68),rgba(0,0,0,.16) 65%,rgba(0,0,0,.12)),linear-gradient(0deg,rgba(0,0,0,.61),transparent 25%,transparent 75%,rgba(0,0,0,.24))}
 .ks-site .ks-hero-head{position:absolute;top:39px;left:5vw;right:5vw;display:flex;justify-content:space-between;font-size:9px;letter-spacing:.17em;font-weight:700;color:#d4d4d1}
 .ks-site .ks-hero-copy{z-index:1;position:relative;margin-left:8vw;max-width:950px;margin-top:65px}
@@ -369,16 +369,16 @@
 
 
 /* Metallic wordmark proportions */
-.ks-site .ks-nav.ks-nav-minimal .ks-brand img{width:174px;max-width:38vw;max-height:40px;height:auto;object-fit:contain}
+.ks-site .ks-nav.ks-nav-minimal .ks-brand img{width:150px;max-width:34vw;max-height:34px;height:auto;object-fit:contain}
 .ks-site .ks-menu-drawer .ks-menu-top img{width:168px;max-width:47vw;max-height:42px;height:auto;object-fit:contain;filter:brightness(.32)}
 @media(max-width:520px){
-.ks-site .ks-nav.ks-nav-minimal .ks-brand img{width:137px;max-width:47vw}
+.ks-site .ks-nav.ks-nav-minimal .ks-brand img{width:120px;max-width:42vw}
 .ks-site .ks-menu-drawer .ks-menu-top img{width:140px}
 }
 
 
 /* Homepage hero: muted, non-looping video retains its final frame on ended.
-   Existing Audi still remains behind it while the video loads or if unavailable. */
+   The video is the sole hero media (no image fallback). */
 .ks-site .ks-hero-video{
  position:absolute;
  inset:0;
