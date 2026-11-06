@@ -1426,3 +1426,172 @@
  .ks-site.ks-studio.ks-studio-config .ks-config-wheel-choice{font-size:9px}
  .ks-site.ks-studio.ks-studio-config .ks-config-footnote{padding:12px 16px 20px}
 }
+
+
+/* Audi-inspired right order / payment summary card. */
+.ks-site.ks-studio.ks-studio-config .ks-config-order{
+ grid-column:3;
+ grid-row:1;
+ align-self:center;
+ position:relative;
+ z-index:4;
+ width:100%;
+ padding:29px 25px 24px;
+ background:#fff;
+ color:#202327;
+ border:1px solid #e9eaec;
+ border-radius:27px;
+ box-shadow:0 10px 35px rgba(30,34,39,.10),0 2px 8px rgba(30,34,39,.035);
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-order-eyebrow{
+ display:block;
+ color:#858b92;
+ font:700 9px/1.4 'DM Sans',Arial,sans-serif;
+ letter-spacing:.13em;
+ margin-bottom:12px;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-order h2{
+ color:#202327;
+ font:600 24px/1.15 'DM Sans',Arial,sans-serif;
+ letter-spacing:-.045em;
+ text-align:center;
+ margin:0 0 10px;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-order-lead{
+ color:#899098;
+ font-size:11px;
+ text-align:center;
+ line-height:1.55;
+ margin:0 0 24px;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-order-summary{
+ display:flex;
+ flex-direction:column;
+ gap:12px;
+ border-top:1px solid #eceef0;
+ border-bottom:1px solid #eceef0;
+ padding:17px 0;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-order-summary>div{
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ gap:10px;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-order-summary span{
+ font:700 9px/1.35 'DM Sans',Arial,sans-serif;
+ letter-spacing:.06em;
+ color:#969ba1;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-order-summary strong{
+ font:600 11px/1.4 'DM Sans',Arial,sans-serif;
+ text-align:right;
+ color:#2c3034;
+ display:inline-flex;
+ align-items:center;
+ justify-content:flex-end;
+ gap:5px;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-order-dot{
+ display:inline-block;
+ width:11px;height:11px;border-radius:50%;
+ border:1px solid #a4a9ae;
+ flex:none;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-order-total{
+ display:flex;
+ flex-direction:column;
+ align-items:center;
+ text-align:center;
+ padding:21px 0 18px;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-order-total>span{
+ font:700 9px 'DM Sans',Arial,sans-serif;
+ letter-spacing:.12em;
+ color:#92969b;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-order-total strong{
+ margin:10px 0 7px;
+ font:600 17px/1.25 'DM Sans',Arial,sans-serif;
+ letter-spacing:-.035em;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-order-total small{
+ font:500 10px/1.5 'DM Sans',Arial,sans-serif;
+ color:#8d9298;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-order-pay,
+.ks-site.ks-studio.ks-studio-config .ks-config-order-save{
+ width:100%;
+ min-height:41px;
+ border-radius:24px;
+ font:700 10px/1.4 'DM Sans',Arial,sans-serif;
+ letter-spacing:.04em;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-order-pay{
+ background:#8fa9db;
+ color:#fff;
+ border:1px solid #8fa9db;
+ cursor:not-allowed;
+ opacity:.77;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-order-save{
+ display:block;
+ margin-top:9px;
+ background:#fff;
+ border:1px solid #d8dbde;
+ color:#2d3238;
+ cursor:pointer;
+ transition:background .2s,border-color .2s;
+}
+.ks-site.ks-studio.ks-studio-config .ks-config-order-save:hover{background:#f1f3f6;border-color:#bfc5cc}
+.ks-site.ks-studio.ks-studio-config .ks-config-order-status{
+ font:500 10px/1.5 'DM Sans',Arial,sans-serif;
+ color:#326bd9;
+ text-align:center;
+ margin:12px 0 0;
+}
+@media(min-width:1021px) and (max-width:1100px){
+ .ks-site.ks-studio.ks-studio-config .ks-config-stage{
+  grid-template-columns:250px minmax(0,1fr) 250px;
+ }
+ .ks-site.ks-studio.ks-studio-config .ks-config-order{padding:23px 19px}
+}
+/* On tablets: keep the car centered and place both cards beneath it. */
+@media(min-width:821px) and (max-width:1020px){
+ .ks-site.ks-studio.ks-studio-config .ks-config-stage{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  grid-template-rows:400px auto;
+  gap:20px;
+  padding-bottom:26px;
+ }
+ .ks-site.ks-studio.ks-studio-config .ks-config-vehicle{
+  grid-column:1/-1;grid-row:1;height:400px;
+ }
+ .ks-site.ks-studio.ks-studio-config .ks-config-selection{
+  grid-column:1;grid-row:2;align-self:stretch;
+ }
+ .ks-site.ks-studio.ks-studio-config .ks-config-order{
+  grid-column:2;grid-row:2;align-self:stretch;
+ }
+}
+/* Mobile: car first, selection second, order summary third. */
+@media(max-width:820px){
+ .ks-site.ks-studio.ks-studio-config .ks-config-stage{
+  grid-template-rows:360px auto auto;
+ }
+ .ks-site.ks-studio.ks-studio-config .ks-config-order{
+  grid-column:1;grid-row:3;
+  max-width:600px;
+  margin:0 auto 14px;
+ }
+}
+@media(max-width:520px){
+ .ks-site.ks-studio.ks-studio-config .ks-config-stage{
+  grid-template-rows:290px auto auto;
+ }
+ .ks-site.ks-studio.ks-studio-config .ks-config-order{
+  border-radius:21px;
+  padding:25px 22px;
+ }
+ .ks-site.ks-studio.ks-studio-config .ks-config-order h2{font-size:24px}
+}
