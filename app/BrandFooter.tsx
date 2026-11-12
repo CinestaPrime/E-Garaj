@@ -33,7 +33,6 @@ export default function BrandFooter({studio=false}:{studio?:boolean}) {
       </div>
       <div className="footer-bottom">
         <span>© 2026 E-GARAGE · CINESTAAI</span>
-        <span>Platformda yer alan marka ve modellerin ilgili üreticilerle resmî bağlantısı bulunmayabilir.</span>
       </div>
     </footer>
   );
