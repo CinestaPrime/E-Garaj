@@ -160,7 +160,6 @@ export default async function InformationPage({params}:{params:Promise<{slug:str
       {section.paragraphs.map((paragraph,i)=><p key={i}>{paragraph.startsWith("E-posta: info@egarageauto.com")?<a href="mailto:info@egarageauto.com">info@egarageauto.com</a>:paragraph.startsWith("CinestaAI: https://")?<a href="https://cinestaai.com" target="_blank" rel="noopener noreferrer">cinestaai.com ↗</a>:paragraph}</p>)}
       {section.bullets&&<ul>{section.bullets.map((item,i)=><li key={i}>{item}</li>)}</ul>}
     </section>)}
-    <p className="ks-info-note">Bu sayfadaki bilgiler platformun mevcut hizmet kapsamını açıklamak amacıyla hazırlanmıştır. Hizmetler geliştikçe içerik güncellenebilir.</p>
    </article>
   </div>
   <BrandFooter/>
