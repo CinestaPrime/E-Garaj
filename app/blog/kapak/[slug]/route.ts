@@ -1,4 +1,4 @@
-import {getBlogPost} from "../../../posts";
+import {getBlogPost} from "../../posts";
 export const runtime="nodejs";
 function escapeXml(s:string){return s.replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&apos;"}[c]||c));}
 export async function GET(_req:Request,{params}:{params:Promise<{slug:string}>}){
