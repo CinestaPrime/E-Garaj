@@ -26,7 +26,7 @@ export const blogPosts:BlogPost[]=[
     ],
     "date": "2026-11-12",
     "readingMinutes": 3,
-    "cover": "/blog/kapak/yapay-zeka-otomotiv-sektorunu-nasil-degistiriyor"
+    "cover": "/blog/yapay-zeka-otomotiv-sektorunu-nasil-degistiriyor.webp"
   },
   {
     "slug": "gelecekte-arac-kisisellestirme-nasil-olacak",
@@ -53,7 +53,7 @@ export const blogPosts:BlogPost[]=[
     ],
     "date": "2026-11-12",
     "readingMinutes": 3,
-    "cover": "/blog/kapak/gelecekte-arac-kisisellestirme-nasil-olacak"
+    "cover": "/blog/gelecekte-arac-kisisellestirme-nasil-olacak.webp"
   },
   {
     "slug": "dijital-arac-studyosu-nedir",
@@ -80,7 +80,7 @@ export const blogPosts:BlogPost[]=[
     ],
     "date": "2026-11-12",
     "readingMinutes": 3,
-    "cover": "/blog/kapak/dijital-arac-studyosu-nedir"
+    "cover": "/blog/dijital-arac-studyosu-nedir.webp"
   },
   {
     "slug": "arac-modifiye-ederken-dikkat-edilmesi-gerekenler",
@@ -107,7 +107,7 @@ export const blogPosts:BlogPost[]=[
     ],
     "date": "2026-11-12",
     "readingMinutes": 3,
-    "cover": "/blog/kapak/arac-modifiye-ederken-dikkat-edilmesi-gerekenler"
+    "cover": "/blog/arac-modifiye-ederken-dikkat-edilmesi-gerekenler.webp"
   },
   {
     "slug": "jant-secimi-aracin-karakterini-nasil-degistirir",
@@ -134,7 +134,7 @@ export const blogPosts:BlogPost[]=[
     ],
     "date": "2026-11-12",
     "readingMinutes": 3,
-    "cover": "/blog/kapak/jant-secimi-aracin-karakterini-nasil-degistirir"
+    "cover": "/blog/jant-secimi-aracin-karakterini-nasil-degistirir.webp"
   },
   {
     "slug": "arac-rengi-secimi-stil-algi-kimlik",
@@ -161,7 +161,7 @@ export const blogPosts:BlogPost[]=[
     ],
     "date": "2026-11-12",
     "readingMinutes": 3,
-    "cover": "/blog/kapak/arac-rengi-secimi-stil-algi-kimlik"
+    "cover": "/blog/arac-rengi-secimi-stil-algi-kimlik.webp"
   },
   {
     "slug": "elektrikli-araclarda-tasarim-ve-teknoloji-trendleri",
@@ -188,7 +188,7 @@ export const blogPosts:BlogPost[]=[
     ],
     "date": "2026-11-12",
     "readingMinutes": 3,
-    "cover": "/blog/kapak/elektrikli-araclarda-tasarim-ve-teknoloji-trendleri"
+    "cover": "/blog/elektrikli-araclarda-tasarim-ve-teknoloji-trendleri.webp"
   },
   {
     "slug": "2030da-otomobil-dunyasinda-bizi-neler-bekliyor",
@@ -215,7 +215,7 @@ export const blogPosts:BlogPost[]=[
     ],
     "date": "2026-11-12",
     "readingMinutes": 3,
-    "cover": "/blog/kapak/2030da-otomobil-dunyasinda-bizi-neler-bekliyor"
+    "cover": "/blog/2030da-otomobil-dunyasinda-bizi-neler-bekliyor.webp"
   },
   {
     "slug": "e-garage-nedir",
@@ -242,7 +242,7 @@ export const blogPosts:BlogPost[]=[
     ],
     "date": "2026-11-12",
     "readingMinutes": 3,
-    "cover": "/blog/kapak/e-garage-nedir"
+    "cover": "/blog/e-garage-nedir.webp"
   },
   {
     "slug": "e-garage-ile-arac-deneyimi",
@@ -269,7 +269,7 @@ export const blogPosts:BlogPost[]=[
     ],
     "date": "2026-11-12",
     "readingMinutes": 3,
-    "cover": "/blog/kapak/e-garage-ile-arac-deneyimi"
+    "cover": "/blog/e-garage-ile-arac-deneyimi.webp"
   },
   {
     "slug": "akilli-servis-ve-bakim-sistemleri",
@@ -296,7 +296,7 @@ export const blogPosts:BlogPost[]=[
     ],
     "date": "2026-11-12",
     "readingMinutes": 3,
-    "cover": "/blog/kapak/akilli-servis-ve-bakim-sistemleri"
+    "cover": "/blog/akilli-servis-ve-bakim-sistemleri.webp"
   },
   {
     "slug": "uyumlu-parca-nasil-secilir",
@@ -323,7 +323,7 @@ export const blogPosts:BlogPost[]=[
     ],
     "date": "2026-11-12",
     "readingMinutes": 3,
-    "cover": "/blog/kapak/uyumlu-parca-nasil-secilir"
+    "cover": "/blog/uyumlu-parca-nasil-secilir.webp"
   }
 ];
 export function getBlogPost(slug:string){return blogPosts.find(post=>post.slug===slug)}
