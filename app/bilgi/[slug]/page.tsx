@@ -123,7 +123,7 @@ const pages:Record<string,InfoPage>={
   title:"İletişim Bilgileri",
   intro:"E-GARAGE ile ilgili görüş, öneri, iş birliği ve kurumsal başvurular için iletişim yönlendirmeleri.",
   sections:[
-   {heading:"Kurumsal iletişim",paragraphs:["E-GARAGE, CinestaAI bünyesinde geliştirilen bir dijital otomotiv girişimidir. Proje, iş ortaklığı, teknik destek veya kurumsal bilgi talepleri için aşağıdaki bağlantıyı kullanarak CinestaAI'ın resmî internet sitesine ulaşabilirsiniz."]},
+   {heading:"Kurumsal iletişim",paragraphs:["E-GARAGE, CinestaAI bünyesinde geliştirilen bir dijital otomotiv girişimidir. Proje, iş ortaklığı, teknik destek veya kurumsal bilgi talepleri için e-posta adresimiz üzerinden bize ulaşabilirsiniz.","E-posta: info@egarageauto.com"]},
    {heading:"İş birlikleri",paragraphs:["Otomotiv aksesuar, yedek parça ve ilgili ürün sektöründe faaliyet gösteren işletmelerle olası iş birliklerini değerlendirmeyi hedefliyoruz. Ürün katalogları, marka ve model uyumluluğu, görselleştirme veya platform entegrasyonu üzerine görüşmeler kurumsal kanallar üzerinden yürütülebilir."]},
    {heading:"Gizlilik ve hukuki talepler",paragraphs:["Kişisel veriler, kullanım şartları ya da içerik haklarıyla ilgili taleplerinizde başvuru konusunu ve yanıt alınabilecek iletişim bilgilerinizi belirtmeniz sürecin değerlendirilmesini kolaylaştırır."]},
    {heading:"Resmî web sitesi",paragraphs:["CinestaAI: https://cinestaai.com"]},
@@ -157,7 +157,7 @@ export default async function InformationPage({params}:{params:Promise<{slug:str
     <div className="ks-info-rule"/>
     {page.sections.map((section,index)=><section key={index} className="ks-info-section">
       <h2>{section.heading}</h2>
-      {section.paragraphs.map((paragraph,i)=><p key={i}>{paragraph.startsWith("CinestaAI: https://")?<a href="https://cinestaai.com" target="_blank" rel="noopener noreferrer">cinestaai.com ↗</a>:paragraph}</p>)}
+      {section.paragraphs.map((paragraph,i)=><p key={i}>{paragraph.startsWith("E-posta: info@egarageauto.com")?<a href="mailto:info@egarageauto.com">info@egarageauto.com</a>:paragraph.startsWith("CinestaAI: https://")?<a href="https://cinestaai.com" target="_blank" rel="noopener noreferrer">cinestaai.com ↗</a>:paragraph}</p>)}
       {section.bullets&&<ul>{section.bullets.map((item,i)=><li key={i}>{item}</li>)}</ul>}
     </section>)}
     <p className="ks-info-note">Bu sayfadaki bilgiler platformun mevcut hizmet kapsamını açıklamak amacıyla hazırlanmıştır. Hizmetler geliştikçe içerik güncellenebilir.</p>
